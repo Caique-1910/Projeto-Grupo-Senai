@@ -20,14 +20,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vh 2vw;
+    padding: 2vh 3vw; 
 }
 
 
 .logo {
-    width: 15vw;  
-    height: 15vh; 
-    
+    width: 12vw; 
+    height: auto; 
 }
 
 .logo img {
@@ -166,7 +165,65 @@ aside{
     border-radius: 18px;
     height: 25vh;
     width: 17vw;
-    font-size: 0.8em;
+    font-size: 1.8vh;
+}
+.pokemon-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    color: #cd290c;
+    border-radius: 18px;
+    height: 25vh;
+    width: 17vw;
+    font-size: 1.8vh;
+    
+}
+.pokemon-3{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    color: #cd290c;
+    border-radius: 18px;
+    height: 25vh;
+    width: 17vw;
+    font-size: 1.8vh;
+    
+}
+.pokemon-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    color: #cd290c;
+    border-radius: 18px;
+    height: 25vh;
+    width: 17vw;
+    font-size: 1.8vh;
+}
+.pokemon-5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    color: #cd290c;
+    border-radius: 18px;
+    height: 25vh;
+    width: 17vw;
+    font-size: 1.8vh;
+    
+}
+.pokemon-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    color: #cd290c;
+    border-radius: 18px;
+    height: 25vh;
+    width: 17vw;
+    font-size: 1.8vh;
     
 }
 
@@ -299,5 +356,65 @@ justify-content: space-between;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    height: 25vh;
+    height: 40vh;
+}
+.confirm-layer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 10vh;
+}
+
+.botao-salvar{
+    width: 30%;
+    height: 60%;
+    font-size: 0.7em;
+    background-color: #000000;
+    color: #cd290c;
+    border-color: #cd290cf1;
+    border-radius: 10px;
+      cursor: pointer;
+}
+.botao-cancelar{
+   width: 30%;
+    height: 60%;
+    font-size: 0.7em;
+    background-color: #000000;
+    color: #cd290c;
+    border-color: #cd290cf1;
+    border-radius: 10px;
+      cursor: pointer;
+}
+
+.botao-seguranca{
+width: 17vw;
+    height: 15vh;
+    font-size: 0.7em;
+    background-color: #000000;
+    color: #cd290c;
+    border-color: #cd290cf1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.botao-confirmacao{
+    width: 19vw;
+    height: 5vh;
+    font-size: 0.7em;
+    background-color: #000000;
+    color: #cd290c;
+    border-color: #cd290cf1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.botao-cancelar{
+    width: 19vw;
+    height: 5vh;
+    font-size: 0.7em;
+    background-color: #000000;
+    color: #cd290c;
+    border-color: #cd290cf1;
+    border-radius: 10px;
+    cursor: pointer;
 }
