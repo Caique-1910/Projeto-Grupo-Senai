@@ -104,6 +104,7 @@ aside{
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
+    border: 2px solid #cd290cf1; 
     border-radius: 10px;
     height: 7vh;
     padding: 1.8%;
@@ -157,76 +158,24 @@ aside{
     padding: 2%;
 }
 
-.pokemon-1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000000;
-    color: #cd290c;
-    border-radius: 18px;
-    height: 25vh;
-    width: 17vw;
-    font-size: 1.8vh;
-}
-.pokemon-2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000000;
-    color: #cd290c;
-    border-radius: 18px;
-    height: 25vh;
-    width: 17vw;
-    font-size: 1.8vh;
-    
-}
-.pokemon-3{
-        display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000000;
-    color: #cd290c;
-    border-radius: 18px;
-    height: 25vh;
-    width: 17vw;
-    font-size: 1.8vh;
-    
-}
-.pokemon-4{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000000;
-    color: #cd290c;
-    border-radius: 18px;
-    height: 25vh;
-    width: 17vw;
-    font-size: 1.8vh;
-}
-.pokemon-5{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000000;
-    color: #cd290c;
-    border-radius: 18px;
-    height: 25vh;
-    width: 17vw;
-    font-size: 1.8vh;
-    
-}
+.pokemon-1,
+.pokemon-2,
+.pokemon-3,
+.pokemon-4,
+.pokemon-5,
 .pokemon-6{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #000000;
+    border: 2px solid #cd290cf1; 
     color: #cd290c;
     border-radius: 18px;
     height: 25vh;
     width: 17vw;
     font-size: 1.8vh;
-    
 }
+
 
 .poke-cima{
     display: flex;
@@ -331,6 +280,7 @@ justify-content: space-between;
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
+    border: 2px solid #cd290cf1; 
     border-radius: 10px;
     height: 7vh;
     padding: 1.8%;
@@ -413,8 +363,8 @@ width: 17vw;
     width: 19vw;
     height: 5vh;
     font-size: 0.7em;
-    background-color: #000000;
     color: #cd290c;
+    background-color: #000000;
     border-color: #cd290cf1;
     border-radius: 10px;
     cursor: pointer;
