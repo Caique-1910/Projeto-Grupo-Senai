@@ -257,6 +257,11 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 1.5vh;
+    gap: 5%;
+}
+
+.edit-add-layer{
+margin-left: 1.2%;
 }
 
 .container-baixo {
