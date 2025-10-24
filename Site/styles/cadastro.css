@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
-    margin: 0;
+    margin: 2;
     padding: 0;
     box-sizing: border-box;
     font-family: "Press Start 2P", system-ui;
+    
 }
 
 html {
@@ -51,16 +52,17 @@ h1 {
     height: 40vh;
     width: 40vw;
     gap: 4%;
-    margin-left: 15%;
+    margin-left: 24%;
 }
 
 .botoes {
     display: flex;
     justify-content: space-around;
-    width: 38vw;
+    width: 40vw;
     height: 8vh;
     margin-bottom: 5%;
     margin-top: 5%;
+  
 }
 
 .cadastrar,
@@ -140,14 +142,13 @@ h1 {
         height: 40vh;
         width: 35vw;
         gap: 4%;
-        margin-left: 15%;
     }
     
     .botoes {
         display: flex;
         justify-content: space-around;
-        width: 30vw;
-        height: 8vh;
+        width: 35vw;
+        height: 6vh;
         margin-bottom: 5%;
         margin-top: 8%;
         
@@ -231,7 +232,7 @@ h1 {
         .form-campos {
             display: flex;
             flex-direction: column;
-            height: 36vh;
+            height: 32vh;
             width: 36vw;
             gap: 4%;
             margin-left: 15%;
@@ -369,273 +370,5 @@ h1 {
             color: #ffffff;
             font-size: 1.1em;
         }
-
-    }
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #362D3E;
-    border: 6px solid #cd290c;
-    color: #ffffff;
-    border-radius: 18px;
-    height: 80vh;
-    width: 35vw;
-    font-size: 1.8vh;
-}
-
-h1 {
-    color: #F8B050;
-}
-
-.form-campos {
-    display: flex;
-    flex-direction: column;
-    height: 45vh;
-    width: 40vw;
-    gap: 4%;
-    margin-left: 15%;
-}
-
-.botoes {
-    display: flex;
-    justify-content: space-around;
-    width: 40vw;
-    height: 8vh;
-    margin-bottom: 5%;
-    margin-top: 8%;
-    padding-right: 5%;
-}
-
-.cadastrar,
-.voltar {
-    background-color: #362D3E;
-    color: white;
-    width: 13vw;
-    font-size: 1.1em;
-    align-items: center;
-    border: 4px solid #cd290c;
-    border-radius: 10px;
-    cursor: pointer;
-    
-}
-
-.usuario,
-.email,
-.senha,
-.confirma-senha {
-    width: 50%;
-    height: 23%;
-    background: #362D3E;
-    border: 4px solid #cd290c;
-    border-radius: 10px;
-    outline: none;
-    color: #ffffff;
-    font-size: 1.1em;
-}
-
-@media(max-width:900px){
-    .cadastro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        background-color: #362D3E;
-        border: 6px solid #cd290c;
-        color: #ffffff;
-        border-radius: 18px;
-        height: 80vh;
-        width: 35vw;
-        font-size: 1.4vh;
-    }
-    
-    h1 {
-        color: #F8B050;
-        font-size: 2.5vh;
-    }
-    
-    .form-campos {
-        display: flex;
-        flex-direction: column;
-        height: 40vh;
-        width: 35vw;
-        gap: 4%;
-        margin-left: 15%;
-    }
-    
-    .botoes {
-        display: flex;
-        justify-content: space-around;
-        width: 30vw;
-        height: 8vh;
-        margin-bottom: 5%;
-        margin-top: 8%;
-        
-    }
-    
-    .cadastrar,
-    .voltar {
-        background-color: #362D3E;
-        color: white;
-        width: 40%;
-        font-size: 0.8em;
-        align-items: center;
-        border: 4px solid #cd290c;
-        border-radius: 10px;
-        cursor: pointer;
-        
-    }
-    
-    .usuario,
-    .email,
-    .senha,
-    .confirma-senha {
-        width: 50%;
-        height: 23%;
-        background: #362D3E;
-        border: 4px solid #cd290c;
-        border-radius: 10px;
-        outline: none;
-        color: #ffffff;
-        font-size: 1.1em;
-    }
-}
-
-    @media(max-width:750px){
-        .cadastro {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            background-color: #362D3E;
-            border: 6px solid #cd290c;
-            color: #ffffff;
-            border-radius: 18px;
-            height: 80vh;
-            width: 35vw;
-            font-size: 1.5vh;
-        }
-        
-        h1 {
-            color: #F8B050;
-            font-size: 2.5vh;
-        }
-        
-        .form-campos {
-            display: flex;
-            flex-direction: column;
-            height: 45vh;
-            width: 35vw;
-            gap: 4%;
-            margin-left: 15%;
-        }
-        
-        .botoes {
-            display: flex;
-            justify-content: space-around;
-            width: 30vw;
-            height: 8vh;
-            margin-bottom: 5%;
-            margin-top: 10%;
-            padding-right: 5%;
-            margin-left: 5%;
-        }
-        
-        .cadastrar,
-        .voltar {
-            background-color: #362D3E;
-            color: white;
-            width: 40%;
-            font-size: 0.8em;
-            align-items: center;
-            border: 4px solid #cd290c;
-            border-radius: 10px;
-            cursor: pointer;
-            
-        }
-        
-        .usuario,
-        .email,
-        .senha,
-        .confirma-senha {
-            width: 50%;
-            height: 23%;
-            background: #362D3E;
-            border: 4px solid #cd290c;
-            border-radius: 10px;
-            outline: none;
-            color: #ffffff;
-            font-size: 0.8em;
-        }
-
-    }
-
-    @media(max-width:500px){
-        .cadastro {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            background-color: #362D3E;
-            border: 6px solid #cd290c;
-            color: #ffffff;
-            border-radius: 18px;
-            height: 80vh;
-            width: 60vw;
-            font-size: 1.3vh;
-        }
-        
-        h1 {
-            color: #F8B050;
-            font-size: 2.5vh;
-        }
-        
-        .form-campos {
-            display: flex;
-            flex-direction: column;
-            height: 40vh;
-            width: 60vw;
-            gap: 4%;
-            margin-left: 15%;
-        }
-        
-        .botoes {
-            display: flex;
-            justify-content: space-around;
-            width: 60vw;
-            height: 7vh;
-            margin-bottom: 5%;
-            margin-top: 10%;
-            padding-right: 5%;
-            margin-left: 5%;
-        }
-        
-        .cadastrar,
-        .voltar {
-            background-color: #362D3E;
-            color: white;
-            width: 40%;
-            font-size: 0.6em;
-            align-items: center;
-            border: 4px solid #cd290c;
-            border-radius: 10px;
-            cursor: pointer;
-            
-        }
-        
-        .usuario,
-        .email,
-        .senha,
-        .confirma-senha {
-            width: 50%;
-            height: 23%;
-            background: #362D3E;
-            border: 4px solid #cd290c;
-            border-radius: 10px;
-            outline: none;
-            color: #ffffff;
-            font-size: 1.1em;
-        }
-
 
     }
