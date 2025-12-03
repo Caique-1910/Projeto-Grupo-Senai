@@ -2,6 +2,7 @@
 const botaoAdicionar = document.getElementById('botao-add');
 const aparecerLayoutExcluir = document.getElementById('add-baixo-dir');
 const botaoExcluir = document.getElementById('botao-excluir');
+const botaoCancelar = document.getElementById('botao-cancelar');
 
 botaoAdicionar.addEventListener('click', function () {
     if (aparecerLayout.style.display === 'none' || !aparecerLayout.style.display) {
@@ -17,4 +18,8 @@ botaoExcluir.addEventListener('click', function () {
     } else {
         aparecerLayoutExcluir.style.display = 'none';
     }
+});
+
+botaoCancelar.addEventListener('click', function () {
+    aparecerLayoutExcluir.style.display = 'none';
 });
