@@ -57,7 +57,7 @@ namespace BackEndProjeto.Controllers
             using (var sha256 = SHA256.Create())
             {
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
-                return Convert.ToHexString(bytes); // deixa a senha como string hexadecimal
+                return Convert.ToBase64String(bytes); // deixa a senha como string hexadecimal
             }
         }
     }
