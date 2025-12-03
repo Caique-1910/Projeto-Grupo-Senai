@@ -11,6 +11,7 @@
     <title>Pokedex</title>
 
     <link rel="stylesheet" href="~/css/home.css">
+    <script src="~/js/site.js" defer></script>
 </head>
 
 <body>
@@ -55,7 +56,7 @@
                         </div>
                         <div class="poke-baixo">
                             <button class="botao-editar">Editar</button>
-                            <button class="botao-excluir">Excluir</button>
+                            <button class="botao-excluir" id="botao-excluir">Excluir</button>
                         </div>
                     </div>
 
@@ -118,7 +119,7 @@
                 </div>
 
                 <div class="add-layer">
-                    <button class="botao-add">+ adicionar pokemon</button>
+                    <button class="botao-add" id="botao-add">+ adicionar pokemon</button>
                 </div>
 
             </section>
@@ -126,7 +127,7 @@
 
             <section class="container-baixo">
 
-                <div class="add-baixo-esq">
+                <div class="add-baixo-esq" id="add-baixo-esq">
 
                     <div class="edit-add-layer">
                         <button class="botao-add">adicionar novo pokemon</button>
@@ -142,6 +143,10 @@
                             <input type="text" placeholder="Tipo:">
                             <img class="add-seta" src="assets/rseta.svg" alt="">
                         </div>
+                        <div class="add-tipo">
+                            <input type="text" placeholder="Tipo 2:">
+                            <img class="add-seta" src="assets/rseta.svg" alt="">
+                        </div>
 
                         <div class="confirm-layer">
                             <button class="botao-salvar">Salvar</button>
@@ -153,7 +158,7 @@
                 </div>
 
 
-                <div class="add-baixo-dir">
+                <div class="add-baixo-dir" id="add-baixo-dir">
                     <p class="aviso-seguranca">Deseja excluir o “pokemon”?</p>
                     <button class="botao-confirmacao">Sim,excluir</button>
                     <button class="botao-cancelar">Cancelar</button>
