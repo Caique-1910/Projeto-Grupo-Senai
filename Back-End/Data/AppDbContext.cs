@@ -40,6 +40,8 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Tipo2)
                 .HasMaxLength(30)
                 .IsUnicode(false);
+            // FK
+            entity.Property(e => e.IdUsuario).IsRequired();
         });
 
         modelBuilder.Entity<Usuario>(entity =>

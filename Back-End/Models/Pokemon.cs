@@ -14,4 +14,7 @@ public partial class Pokemon
     public string? Tipo2 { get; set; }
 
     public int Nivel { get; set; }
+
+    // FK
+     public int IdUsuario { get; set; }
 }
