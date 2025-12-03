@@ -1057,5 +1057,5 @@ C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\n
 C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\BackEndProjeto.pdb
 C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\BackEndProjeto.genruntimeconfig.cache
 C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\ref\BackEndProjeto.dll
-C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-qbvv0a7p0x.gz
-C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-89fz2v2dkt.gz
+C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-vjqv0nx27s.gz
+C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-xo2iolb4i7.gz
