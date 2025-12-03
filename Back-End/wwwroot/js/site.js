@@ -24,5 +24,4 @@ botaoExcluir.addEventListener('click', function () {
 
 botaoCancelar.addEventListener('click', function () {
     aparecerLayoutExcluir.style.display = 'none';
-    aparecerLayout.style.display = 'none';
 });
