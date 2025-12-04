@@ -201,6 +201,10 @@ main {
     gap: 1vw;
 }
 
+.botao-add2{
+    display: none;
+}
+
 .botao-editar,
 .botao-excluir,
 .botao-add,

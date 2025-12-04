@@ -12,8 +12,10 @@ botaoAdicionar.addEventListener('click', function () {
     if (aparecerLayout.style.display === 'none' || !aparecerLayout.style.display) {
         aparecerLayout.style.display = 'block';
         aparecerLayoutBotao.style.display = 'flex';
+        botaoAdicionar2.style.display = 'flex';
     } else {
         aparecerLayout.style.display = 'none';
+        botaoAdicionar2.style.display = 'none';
     }
 });
 
@@ -36,6 +38,5 @@ botaoCancelar2.addEventListener('click', function () {
 botaoEditar.addEventListener('click', function () {
         if(aparecerLayout.style.display === 'none' || !aparecerLayout.style.display) {
             aparecerLayout.style.display = 'block';
-            botaoAdicionar2.textContent = "Editar Pokemon";
         }
     });
