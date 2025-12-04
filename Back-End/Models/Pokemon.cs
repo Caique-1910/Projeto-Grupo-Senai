@@ -13,7 +13,7 @@ public partial class Pokemon
 
     public string? Tipo2 { get; set; }
 
-    public int Nivel { get; set; }
+    public int Nivel { get; set; } //Apagar no banco de dados depois, pois nao esta sendo usado(alter table Pokemon drop column Nivel;)
 
     // FK
      public int IdUsuario { get; set; }

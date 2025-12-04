@@ -55,8 +55,10 @@
                             <p>tipo:</p>
                         </div>
                         <div class="poke-baixo">
-                            <button class="botao-editar" id="botao-editar">Editar</button>
-                            <button class="botao-excluir" id="botao-excluir">Excluir</button>
+                            <button onclick="location.href='#add-baixo-esq'" class="botao-editar"
+                                id="botao-editar">Editar</button>
+                            <button onclick="location.href='#add-baixo-dir'" class="botao-excluir"
+                                id="botao-excluir">Excluir</button>
                         </div>
                     </div>
 
@@ -66,8 +68,10 @@
                             <p>tipo:</p>
                         </div>
                         <div class="poke-baixo">
-                            <button class="botao-editar">Editar</button>
-                            <button class="botao-excluir">Excluir</button>
+                            <button onclick="location.href='#add-baixo-esq'" class="botao-editar"
+                                id="botao-editar">Editar</button>
+                            <button onclick="location.href='#add-baixo-dir'" class="botao-excluir"
+                                id="botao-excluir">Excluir</button>
                         </div>
                     </div>
 
@@ -77,8 +81,10 @@
                             <p>tipo:</p>
                         </div>
                         <div class="poke-baixo">
-                            <button class="botao-editar">Editar</button>
-                            <button class="botao-excluir">Excluir</button>
+                            <button onclick="location.href='#add-baixo-esq'" class="botao-editar"
+                                id="botao-editar">Editar</button>
+                            <button onclick="location.href='#add-baixo-dir'" class="botao-excluir"
+                                id="botao-excluir">Excluir</button>
                         </div>
                     </div>
                 </div>
@@ -90,8 +96,10 @@
                             <p>tipo:</p>
                         </div>
                         <div class="poke-baixo">
-                            <button class="botao-editar">Editar</button>
-                            <button class="botao-excluir">Excluir</button>
+                            <button onclick="location.href='#add-baixo-esq'" class="botao-editar"
+                                id="botao-editar">Editar</button>
+                            <button onclick="location.href='#add-baixo-dir'" class="botao-excluir"
+                                id="botao-excluir">Excluir</button>
                         </div>
                     </div>
 
@@ -101,8 +109,10 @@
                             <p>tipo:</p>
                         </div>
                         <div class="poke-baixo">
-                            <button class="botao-editar">Editar</button>
-                            <button class="botao-excluir">Excluir</button>
+                            <button onclick="location.href='#add-baixo-esq'" class="botao-editar"
+                                id="botao-editar">Editar</button>
+                            <button onclick="location.href='#add-baixo-dir'" class="botao-excluir"
+                                id="botao-excluir">Excluir</button>
                         </div>
                     </div>
 
@@ -112,8 +122,10 @@
                             <p>tipo:</p>
                         </div>
                         <div class="poke-baixo">
-                            <button class="botao-editar">Editar</button>
-                            <button class="botao-excluir">Excluir</button>
+                            <button onclick="location.href='#add-baixo-esq'" class="botao-editar"
+                                id="botao-editar">Editar</button>
+                            <button onclick="location.href='#add-baixo-dir'" class="botao-excluir"
+                                id="botao-excluir">Excluir</button>
                         </div>
                     </div>
                 </div>
@@ -124,16 +136,12 @@
 
             </section>
 
-
             <section class="container-baixo">
 
                 <div class="add-baixo-esq" id="add-baixo-esq">
 
-                    <div class="edit-add-layer">
-                        <button class="botao-add2" id="botao-add2">adicionar novo pokemon</button>
-                    </div>
-
                     <div class="add-layer">
+                        <button class="botao-add2" id="botao-add2">adicionar novo pokemon</button>
 
                         <div class="add-nome">
                             <input type="text" placeholder="Nome:">
@@ -143,13 +151,14 @@
                             <input type="text" placeholder="Tipo:">
                             <img class="add-seta" src="assets/rseta.svg" alt="">
                         </div>
+
                         <div class="add-tipo">
                             <input type="text" placeholder="Tipo 2:">
                             <img class="add-seta" src="assets/rseta.svg" alt="">
                         </div>
 
                         <div class="confirm-layer">
-                            <button class="botao-salvar">Salvar</button>
+                            <button class="botao-salvar" id="botao-salvar">Salvar</button>
                             <button class="botao-cancelar" id="botao-cancelar1">Cancelar</button>
                         </div>
 
@@ -157,19 +166,14 @@
 
                 </div>
 
-
                 <div class="add-baixo-dir" id="add-baixo-dir">
                     <p class="aviso-seguranca">Deseja excluir o “pokemon”?</p>
-                    <button class="botao-confirmacao">Sim,excluir</button>
+                    <button class="botao-confirmacao" id="botao-confirmacao">Sim,excluir</button>
                     <button class="botao-cancelar" id="botao-cancelar2">Cancelar</button>
                 </div>
-
             </section>
-
         </main>
-
     </div>
-
 </body>
 
 </html>
