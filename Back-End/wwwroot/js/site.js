@@ -1,102 +1,75 @@
-﻿const aparecerLayout = document.getElementById('add-baixo-esq');
+﻿// Elementos
+const aparecerLayout = document.getElementById('add-baixo-esq');
 const botaoAdicionar = document.getElementById('botao-add');
-const botaoAdicionar2 = document.getElementById('botao-add2');
-const aparecerLayoutExcluir = document.getElementById('add-baixo-dir');
-const botoesExcluir = document.querySelectorAll('.botao-excluir');
+const botaoSalvar = document.querySelector('.botao-salvar');
 const botaoCancelar1 = document.getElementById('botao-cancelar1');
 const botaoCancelar2 = document.getElementById('botao-cancelar2');
-const botoesEditar = document.querySelectorAll('.botao-editar');
+const exclusaoElement = document.getElementById('botao-confirmacao');
+const formAdicionar = document.querySelector('form[action="/Pokemon/Create"]');
+const formExcluir = document.getElementById('form-excluir');
+const inputPokemonIdExcluir = document.getElementById('pokemon-id-excluir');
+const layoutExcluir = document.getElementById('add-baixo-dir');
 
+// Inputs do form
+const inputNome = document.querySelector('input[name="Nome"]');
+const inputTipo = document.querySelector('input[name="Tipo"]');
+const inputTipo2 = document.querySelector('input[name="Tipo2"]');
+const inputPokemonId = document.querySelector('input[name="PokemonId"]');
+
+// Função para editar Pokémon
+function editarPokemon(pokemonId) {
+    const pokemon = pokemons.find(p => p.pokemonId === pokemonId);
+    if (pokemon) {
+        // Preenche os campos com os dados do Pokémon
+        inputNome.value = pokemon.nome;
+        inputTipo.value = pokemon.tipo;
+        inputTipo2.value = pokemon.tipo2 || '';
+        inputPokemonId.value = pokemonId; // Define o ID para edição
+        aparecerLayout.style.display = 'flex'; // Mostra o layout de edição
+    }
+}
+
+// Função para excluir Pokémon
+function excluirPokemon(pokemonId) {
+    inputPokemonIdExcluir.value = pokemonId; // Define o ID no form de exclusão
+    layoutExcluir.style.display = 'flex'; // Mostra o layout de confirmação
+}
+
+// Evento para "botao-add": Se layout visível, valide e submeta o form (POST); senão, mostre o layout
 botaoAdicionar.addEventListener('click', function () {
-    if (aparecerLayout.style.display === 'none' || !aparecerLayout.style.display) {
-        aparecerLayout.style.display = 'flex';
-        botaoAdicionar2.style.display = 'flex';
+    if (aparecerLayout.style.display === 'flex') {
+        const nome = inputNome.value.trim();
+        const tipo = inputTipo.value.trim();
+        if (!nome || !tipo) {
+            alert('Nome e Tipo são obrigatórios.');
+            return;
+        }
+        formAdicionar.submit();
     } else {
-        aparecerLayout.style.display = 'none';
-        botaoAdicionar2.style.display = 'none';
+        aparecerLayout.style.display = 'flex';
     }
 });
 
-botoesExcluir.forEach(btn => {
-    btn.addEventListener('click', function () {
-        if (aparecerLayoutExcluir.style.display === 'none' || !aparecerLayoutExcluir.style.display) {
-            aparecerLayoutExcluir.style.display = 'flex';
-        } else {
-            aparecerLayoutExcluir.style.display = 'none';
-        }
-    });
+// Evento para salvar (submete o form)
+botaoSalvar.addEventListener('click', function () {
+    formAdicionar.submit();
 });
 
+// Eventos de cancelar
 botaoCancelar1.addEventListener('click', function () {
     aparecerLayout.style.display = 'none';
-    botaoAdicionar2.style.display = 'none';
+    // Limpa os campos ao cancelar
+    inputNome.value = '';
+    inputTipo.value = '';
+    inputTipo2.value = '';
+    inputPokemonId.value = '0';
 });
 
 botaoCancelar2.addEventListener('click', function () {
-    aparecerLayoutExcluir.style.display = 'none';
+    layoutExcluir.style.display = 'none';
 });
 
-botoesEditar.forEach(btn => {
-    btn.addEventListener('click', function () {
-        if (aparecerLayout.style.display === 'none' || !aparecerLayout.style.display) {
-            aparecerLayout.style.display = 'flex';
-        }
-    });
-});
-
-
-const adicaoElement = document.getElementById('botao-add2');
-const exclusaoElement = document.getElementById('botao-confirmacao');
-const edicaoElement = document.getElementById('botao-salvar');
-
-
-adicaoElement.addEventListener('click', function () {
-
-    // Aqui criamos um novo "card" de Pokémon usando createElement.
-    // Ele cria a estrutura abaixo de forma dinâmica:
-
-    // <div class="pokemon-1">
-    //     <div class="poke-cima">
-    //         <p>Nome:</p>
-    //         <p>tipo:</p>
-    //         <p>tipo 2:</p>
-    //     </div>
-    //     <div class="poke-baixo">
-    //         <button class="botao-editar">Editar</button>
-    //         <button class="botao-excluir">Excluir</button>
-    //     </div>
-    // </div>
-
-    const novoQuadro = createElement('div', { className: 'pokemon-1' },
-
-        // PARTE DE CIMA (texto com nome e tipo)
-        createElement('div', { className: 'poke-cima' },
-            createElement('p', null, 'Nome:'),       // Nome vazio
-            createElement('p', null, 'tipo:'),       // Tipo 1 vazio
-            createElement('p', null, 'tipo 2:')      // Tipo 2 vazio
-        ),
-
-        // PARTE DE BAIXO (botões)
-        createElement('div', { className: 'poke-baixo' },
-            createElement('button', { className: 'botao-editar' }, 'Editar'),
-            createElement('button', { className: 'botao-excluir' }, 'Excluir')
-        )
-    );
-
-    // Escolhe o container onde os novos pokemons vão ser colocados
-    const container = document.querySelector('.pokemon-layer-1');
-
-    // Finalmente adiciona o novo card dentro do container
-    container.appendChild(novoQuadro);
-});
-
-
+// Evento para confirmar exclusão
 exclusaoElement.addEventListener('click', function () {
-    const elementoParaRemover = document.querySelector('.pokemon-1');
-    elementoParaRemover.remove();
-});
-
-
-edicaoElement.addEventListener('click', function () {
-    
+    formExcluir.submit();
 });
