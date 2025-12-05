@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-         <div class="logo">
+        <div class="logo">
             <img src="assets/1158.png" alt="Pokebola">
         </div>
         <div class="cabecalho">
@@ -25,13 +25,12 @@
 
     <div class="hero">
         <aside>
-             <img class="botao-a" src="assets/buttomA.png" alt="">
+            <img class="botao-a" src="assets/buttomA.png" alt="">
             <img class="botao-b" src="assets/buttomB.png" alt="">
             <img class="joystick" src="assets/joystick.png" alt="">
         </aside>
 
         <main>
-
             <section class="container-cima">
                 <div class="buscar">
                     <!-- Seu buscar existente -->
@@ -47,15 +46,15 @@
                                 <p>Tipo 2: @(pokemon.Tipo2 ?? "Nenhum")</p>
                             </div>
                             <div class="poke-baixo">
-                                <button  onclick="editarPokemon(@pokemon.PokemonId)" class="botao-editar">Editar</button>
-                                <button  onclick="excluirPokemon(@pokemon.PokemonId)" class="botao-excluir">Excluir</button>
+                                <button onclick="editarPokemon(@pokemon.PokemonId)" class="botao-editar">Editar</button>
+                                <button onclick="excluirPokemon(@pokemon.PokemonId)" class="botao-excluir">Excluir</button>
                             </div>
                         </div>
                     }
                 </div>
 
                 <div class="add-layer">
-                    <button class="botao-add" id="botao-add">+ adicionar pokemon</button>
+                    <button class="botao-add" id="botao-add">+ adicionar pokemon</button>  <!-- Mantém ID aqui -->
                 </div>
             </section>
 
@@ -63,7 +62,8 @@
                 <div class="add-baixo-esq" id="add-baixo-esq">
                     <div class="add-layer">
                         <form action="/Pokemon/Create" method="post">
-                        <button type="submit" class="botao-add" id="botao-add">+ adicionar pokemon</button>
+
+                                <button type="button" class="botao-add-interno" id="botao-add-interno">+ adicionar pokemon</button>  
                             <input type="hidden" name="PokemonId" value="0"> 
                             <div class="add-nome">
                                 <input type="text" name="Nome" placeholder="Nome:" required>
@@ -77,7 +77,7 @@
                                 <img class="add-seta" src="assets/rseta.svg" alt="">
                             </div>
                             <div class="confirm-layer">
-                                <button type="submit" class="botao-salvar">Salvar</button>
+                                <button type="button" class="botao-salvar" id="botao-salvar">Salvar</button>  
                                 <button type="button" class="botao-cancelar" id="botao-cancelar1">Cancelar</button>
                             </div>
                         </form>
@@ -96,5 +96,9 @@
         </main>
     </div>
 
+    
+    <script>
+        const pokemons = @Html.Raw(pokemonsJson);  // Define pokemons com os dados do backend
+    </script>
 </body>
 </html>

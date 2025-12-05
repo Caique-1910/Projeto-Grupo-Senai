@@ -207,6 +207,7 @@ main {
 
 .botao-editar,
 .botao-excluir,
+.botao-add-interno,
 .botao-add,
 .botao-add2,
 .botao-salvar,
@@ -229,6 +230,8 @@ main {
 .botao-editar:hover,
 .botao-excluir:hover,
 .botao-add:hover,
+.botao-add-interno:hover,
+
 .botao-salvar:hover,
 .botao-cancelar:hover,
 .botao-confirmacao:hover {
@@ -338,4 +341,10 @@ main {
     width: 1.2rem;
     cursor: pointer;
     filter: drop-shadow(0 0 0.1rem #cd290c);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

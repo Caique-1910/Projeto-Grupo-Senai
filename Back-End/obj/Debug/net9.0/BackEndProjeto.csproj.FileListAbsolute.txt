@@ -1309,7 +1309,6 @@ C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\k
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\e7741i4d2j-aegj6krkaa.gz
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\le8avknoc9-ackcsvpagb.gz
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\m04wysk83n-90zlr6zwel.gz
-C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-rxsjft83i7.gz
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\8zvcbfi61l-6b1b235c58.gz
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\tdigv650v9-61n19gt1b8.gz
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\rga7sxwxcg-ibxccxlad2.gz
@@ -1324,4 +1323,5 @@ C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\refint\BackE
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\BackEndProjeto.pdb
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\BackEndProjeto.genruntimeconfig.cache
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\ref\BackEndProjeto.dll
-C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-wqdyc8lh09.gz
+C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-xnww52hm6i.gz
+C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-4setpm4uzj.gz
