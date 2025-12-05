@@ -101,7 +101,7 @@ main {
     background-color: #362D3E;
     border: 0.2rem solid #cd290c;
     border-radius: 1.25rem;
-    padding: 1.5vh 2vw;
+    padding: 2.5vh 2vw;
     width: 100%;
     box-shadow: 0 0 1rem #cd290c88;
     display: flex;
@@ -201,7 +201,7 @@ main {
     gap: 1vw;
 }
 
-.botao-add2{
+.botao-add2 {
     display: none;
 }
 
@@ -231,7 +231,6 @@ main {
 .botao-excluir:hover,
 .botao-add:hover,
 .botao-add-interno:hover,
-
 .botao-salvar:hover,
 .botao-cancelar:hover,
 .botao-confirmacao:hover {
@@ -343,7 +342,7 @@ main {
     filter: drop-shadow(0 0 0.1rem #cd290c);
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     gap: 20px;

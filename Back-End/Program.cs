@@ -1,6 +1,7 @@
 using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
 using BackEndProjeto.Data; // ficará válido depois do scaffold
+using BackEndProjeto.Services;
 
 
 
@@ -13,7 +14,7 @@ builder.Services.AddControllersWithViews();
 // registra o DbContext (o namespace/classe virão do scaffold)
 builder.Services.AddDbContext<BackEndProjeto.Data.AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
-
+builder.Services.AddHttpClient<ApiPokemonService>();
 builder.Services.AddSession();
 
 var app = builder.Build();

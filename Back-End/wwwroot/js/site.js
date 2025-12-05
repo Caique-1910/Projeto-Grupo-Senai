@@ -10,7 +10,7 @@
    const formExcluir = document.getElementById('form-excluir');
    const inputPokemonIdExcluir = document.getElementById('pokemon-id-excluir');
    const layoutExcluir = document.getElementById('add-baixo-dir');
-
+   const layoutConfirmar = document.getElementById('confirm-layer');
    // Inputs do form
    const inputNome = document.querySelector('input[name="Nome"]');
    const inputTipo = document.querySelector('input[name="Tipo"]');
@@ -26,6 +26,8 @@ function editarPokemon(pokemonId) {
         inputTipo2.value = pokemon.Tipo2 || '';  
         inputPokemonId.value = pokemonId; 
         aparecerLayout.style.display = 'flex'; 
+        botaoAdicionarInterno.style.display = 'none';
+        layoutConfirmar.style.display = 'flex';
     } else {
         alert('Pokémon não encontrado.');
     }
@@ -50,6 +52,8 @@ function editarPokemon(pokemonId) {
            formAdicionar.submit();
        } else {
            aparecerLayout.style.display = 'flex';
+           layoutConfirmar.style.display = 'none';
+           botaoAdicionarInterno.style.display = 'flex';
        }
    });
 
@@ -92,4 +96,5 @@ function editarPokemon(pokemonId) {
    exclusaoElement.addEventListener('click', function () {
        formExcluir.submit();
    });
+   
    

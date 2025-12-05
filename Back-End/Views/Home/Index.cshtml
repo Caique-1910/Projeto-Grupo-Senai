@@ -3,8 +3,17 @@
     var pokemonsJson = System.Text.Json.JsonSerializer.Serialize(ViewBag.Pokemons ?? new List<Pokemon>());
 }
 
+@if (TempData["Error"] != null)
+{
+    <script>
+        alert("@TempData["Error"]");
+    </script>
+}
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +21,7 @@
     <link rel="stylesheet" href="~/css/home.css">
     <script src="~/js/site.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -54,7 +64,7 @@
                 </div>
 
                 <div class="add-layer">
-                    <button class="botao-add" id="botao-add">+ adicionar pokemon</button>  <!-- Mantém ID aqui -->
+                    <button class="botao-add" id="botao-add">+ adicionar pokemon</button> <!-- Mantém ID aqui -->
                 </div>
             </section>
 
@@ -63,8 +73,7 @@
                     <div class="add-layer">
                         <form action="/Pokemon/Create" method="post">
 
-                                <button type="button" class="botao-add-interno" id="botao-add-interno">+ adicionar pokemon</button>  
-                            <input type="hidden" name="PokemonId" value="0"> 
+                            <input type="hidden" name="PokemonId" value="0">
                             <div class="add-nome">
                                 <input type="text" name="Nome" placeholder="Nome:" required>
                             </div>
@@ -76,10 +85,13 @@
                                 <input type="text" name="Tipo2" placeholder="Tipo 2:">
                                 <img class="add-seta" src="assets/rseta.svg" alt="">
                             </div>
-                            <div class="confirm-layer">
-                                <button type="button" class="botao-salvar" id="botao-salvar">Salvar</button>  
+                            <div class="confirm-layer" id="confirm-layer">
+                                <button type="button" class="botao-salvar" id="botao-salvar">Salvar</button>
                                 <button type="button" class="botao-cancelar" id="botao-cancelar1">Cancelar</button>
                             </div>
+                            <button type="button" class="botao-add-interno" id="botao-add-interno">+ adicionar
+                                pokemon</button>
+
                         </form>
                     </div>
                 </div>
@@ -96,9 +108,10 @@
         </main>
     </div>
 
-    
+
     <script>
         const pokemons = @Html.Raw(pokemonsJson);  // Define pokemons com os dados do backend
     </script>
 </body>
+
 </html>

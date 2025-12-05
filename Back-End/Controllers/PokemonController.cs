@@ -1,22 +1,26 @@
 using BackEndProjeto.Data;
 using Microsoft.AspNetCore.Mvc;
 using BackEndProjeto.Models;
+using BackEndProjeto.Services;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace BackEndProjeto.Controllers
 {
     public class PokemonController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ApiPokemonService _apiPokemonService;
 
-        public PokemonController(AppDbContext context)
+        public PokemonController(AppDbContext context, ApiPokemonService apiPokemonService)
         {
             _context = context;
+            _apiPokemonService = apiPokemonService;
         }
 
         // Ação para criar ou editar um Pokémon (POST via form HTML)
         [HttpPost]
-        public IActionResult Create([FromForm] Pokemon pokemon)
+        public async Task<IActionResult> Create([FromForm] Pokemon pokemon)
         {
             var usuarioId = HttpContext.Session.GetInt32("UsuarioId");
             if (usuarioId == null)
@@ -30,6 +34,15 @@ namespace BackEndProjeto.Controllers
                 TempData["Error"] = "Nome e Tipo são obrigatórios.";
                 return RedirectToAction("Index", "Home");
             }
+
+            bool nomeValido = await _apiPokemonService.NomeValidoAsync(pokemon.Nome);
+            if (!nomeValido)
+            {
+                TempData["Error"] = "Esse Pokémon não existe";
+                return RedirectToAction("Index", "Home");
+            }
+
+
 
             pokemon.IdUsuario = usuarioId.Value;
 
