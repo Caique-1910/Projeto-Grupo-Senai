@@ -1323,6 +1323,6 @@ C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\BackEndProje
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\ref\BackEndProjeto.dll
 C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-cf258ktcng.gz
 C:\Users\52918563862\Desktop\Pokedex2.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-7hh0zocfjv.gz
-C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-cf258ktcng.gz
-C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-7hh0zocfjv.gz
-C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\o31e8hspcl-t1vv2f12oh.gz
+C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\o31e8hspcl-2gha6h3521.gz
+C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-lb1bl1umnx.gz
+C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-02ykgiudom.gz

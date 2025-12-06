@@ -1,100 +1,132 @@
-﻿   // Elementos 
-   const aparecerLayout = document.getElementById('add-baixo-esq');
-   const botaoAdicionar = document.getElementById('botao-add');  
-   const botaoAdicionarInterno = document.getElementById('botao-add-interno');  // Novo botão interno para criação
-   const botaoSalvar = document.getElementById('botao-salvar');  
-   const botaoCancelar1 = document.getElementById('botao-cancelar1');
-   const botaoCancelar2 = document.getElementById('botao-cancelar2');
-   const exclusaoElement = document.getElementById('botao-confirmacao');
-   const formAdicionar = document.querySelector('form[action="/Pokemon/Create"]');
-   const formExcluir = document.getElementById('form-excluir');
-   const inputPokemonIdExcluir = document.getElementById('pokemon-id-excluir');
-   const layoutExcluir = document.getElementById('add-baixo-dir');
-   const layoutConfirmar = document.getElementById('confirm-layer');
-   // Inputs do form
-   const inputNome = document.querySelector('input[name="Nome"]');
-   const inputTipo = document.querySelector('input[name="Tipo"]');
-   const inputTipo2 = document.querySelector('input[name="Tipo2"]');
-   const inputPokemonId = document.querySelector('input[name="PokemonId"]');
+﻿// =====================
+// ELEMENTOS DO FORMULÁRIO
+// =====================
+const aparecerLayout = document.getElementById('add-baixo-esq');
+const botaoAdicionar = document.getElementById('botao-add');
+const botaoAdicionarInterno = document.getElementById('botao-add-interno');
+const botaoSalvar = document.getElementById('botao-salvar');
+const botaoCancelar1 = document.getElementById('botao-cancelar1');
+const botaoCancelar2 = document.getElementById('botao-cancelar2');
+const exclusaoElement = document.getElementById('botao-confirmacao');
+
+const formAdicionar = document.querySelector('form[action="/Pokemon/Create"]');
+const formExcluir = document.getElementById('form-excluir');
+
+const inputPokemonIdExcluir = document.getElementById('pokemon-id-excluir');
+const layoutExcluir = document.getElementById('add-baixo-dir');
+const layoutConfirmar = document.getElementById('confirm-layer');
+
+const inputNome = document.querySelector('input[name="Nome"]');
+const inputTipo = document.querySelector('input[name="Tipo"]');
+const inputTipo2 = document.querySelector('input[name="Tipo2"]');
+const inputPokemonId = document.querySelector('input[name="PokemonId"]');
 
 
-function editarPokemon(pokemonId) {
-    const pokemon = pokemons.find(p => p.PokemonId === pokemonId);  
-    if (pokemon) {
-        inputNome.value = pokemon.Nome; 
-        inputTipo.value = pokemon.Tipo; 
-        inputTipo2.value = pokemon.Tipo2 || '';  
-        inputPokemonId.value = pokemonId; 
-        aparecerLayout.style.display = 'flex'; 
-        botaoAdicionarInterno.style.display = 'none';
-        layoutConfirmar.style.display = 'flex';
-    } else {
-        alert('Pokémon não encontrado.');
+// 1 — DELEGAÇÃO DE EVENTO PARA EDITAR / EXCLUIR
+
+document.querySelector('.pokemon-layer-1').addEventListener('click', function (e) {
+
+    const card = e.target.closest('.pokemon-1');
+    if (!card) return;
+
+    const pokemonId = parseInt(card.dataset.id);
+
+    if (e.target.classList.contains('botao-editar')) {
+        editarPokemon(pokemonId);
     }
+
+    if (e.target.classList.contains('botao-excluir')) {
+        excluirPokemon(pokemonId);
+    }
+});
+
+
+// 2 — FUNÇÃO EDITAR
+
+function editarPokemon(id) {
+    const pokemon = pokemons.find(p => p.PokemonId === id);
+
+    if (!pokemon) {
+        alert('Pokémon não encontrado.');
+        return;
+    }
+
+    inputNome.value = pokemon.Nome;
+    inputTipo.value = pokemon.Tipo;
+    inputTipo2.value = pokemon.Tipo2 ?? "";
+    inputPokemonId.value = id;
+
+    // Mostra o form de edição
+    aparecerLayout.style.display = 'flex';
+
+    // Mostrar área de salvar/editar
+    layoutConfirmar.style.display = 'flex';
+
+    // Esconder botão de adicionar interno
+    botaoAdicionarInterno.style.display = 'none';
 }
 
-   function excluirPokemon(pokemonId) {
-       inputPokemonIdExcluir.value = pokemonId;
-       layoutExcluir.style.display = 'flex';
-   }
 
-   
-   botaoAdicionar.addEventListener('click', function () {
-       if (aparecerLayout.style.display === 'flex') {
-           const nome = inputNome.value.trim();
-           const tipo = inputTipo.value.trim();
-           if (!nome || !tipo) {
-               alert('Nome e Tipo são obrigatórios.');
-               return;
-           }
-           // Para criação, garantir PokemonId = 0
-           inputPokemonId.value = '0';
-           formAdicionar.submit();
-       } else {
-           aparecerLayout.style.display = 'flex';
-           layoutConfirmar.style.display = 'none';
-           botaoAdicionarInterno.style.display = 'flex';
-       }
-   });
+// 3 — FUNÇÃO EXCLUIR
+
+function excluirPokemon(id) {
+    inputPokemonIdExcluir.value = id;
+    layoutExcluir.style.display = 'flex';
+}
 
 
-   botaoAdicionarInterno.addEventListener('click', function () {
-       if (parseInt(inputPokemonId.value) === 0) {
-           const nome = inputNome.value.trim();
-           const tipo = inputTipo.value.trim();
-           if (!nome || !tipo) {
-               alert('Nome e Tipo são obrigatórios.');
-               return;
-           }
-           formAdicionar.submit();  
-       } else {
-           alert('Este botão é apenas para adicionar novos Pokémons. Use "Salvar" para editar.');
-       }
-   });
+// 4 — BOTÃO: “ADICIONAR POKEMON” (DE FORA)
 
-   
-   botaoSalvar.addEventListener('click', function () {
-       if (parseInt(inputPokemonId.value) > 0) {
-           formAdicionar.submit();  
-       } else {
-           alert('Este botão é apenas para editar Pokémons existentes. Use "+ adicionar pokemon" para criar.');
-       }
-   });
+botaoAdicionar.addEventListener('click', () => {
+    limparFormulario();
 
-   botaoCancelar1.addEventListener('click', function () {
-       aparecerLayout.style.display = 'none';
-       inputNome.value = '';
-       inputTipo.value = '';
-       inputTipo2.value = '';
-       inputPokemonId.value = '0';
-   });
+    aparecerLayout.style.display = 'flex';
+    layoutConfirmar.style.display = 'none';
+    botaoAdicionarInterno.style.display = 'flex';
+});
 
-   botaoCancelar2.addEventListener('click', function () {
-       layoutExcluir.style.display = 'none';
-   });
 
-   exclusaoElement.addEventListener('click', function () {
-       formExcluir.submit();
-   });
-   
-   
+// 5 — BOTÃO: “+ adicionar pokemon” (INTERNAMENTE)
+
+botaoAdicionarInterno.addEventListener('click', () => {
+    inputPokemonId.value = 0; // criação
+    formAdicionar.submit();
+});
+
+
+// 6 — BOTÃO: “SALVAR” (EDIÇÃO)
+
+botaoSalvar.addEventListener('click', () => {
+    formAdicionar.submit();
+});
+
+// 7 — CANCELAR (FORMULÁRIO)
+
+botaoCancelar1.addEventListener('click', () => {
+    limparFormulario();
+    aparecerLayout.style.display = 'none';
+});
+
+
+// 8 — CANCELAR (EXCLUSÃO)
+
+botaoCancelar2.addEventListener('click', () => {
+    layoutExcluir.style.display = 'none';
+});
+
+
+// 9 — CONFIRMAR EXCLUSÃO
+
+exclusaoElement.addEventListener('click', () => {
+    formExcluir.submit();
+});
+
+
+// 10 — LIMPAR FORM
+
+function limparFormulario() {
+    inputNome.value = '';
+    inputTipo.value = '';
+    inputTipo2.value = '';
+    inputPokemonId.value = 0;
+}

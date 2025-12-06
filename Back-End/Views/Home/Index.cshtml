@@ -3,12 +3,6 @@
     var pokemonsJson = System.Text.Json.JsonSerializer.Serialize(ViewBag.Pokemons ?? new List<Pokemon>());
 }
 
-@if (TempData["Error"] != null)
-{
-    <script>
-        alert("@TempData["Error"]");
-    </script>
-}
 
 
 <!DOCTYPE html>
@@ -53,22 +47,35 @@
                     </div>
                 </div>
 
-                <div class="pokemon-layer-1">
-                    @foreach (var pokemon in ViewBag.Pokemons ?? new List<Pokemon>())
-                    {
-                        <div class="pokemon-1" data-id="@pokemon.PokemonId">
-                            <div class="poke-cima">
-                                <p>Nome: @pokemon.Nome</p>
-                                <p>Tipo: @pokemon.Tipo</p>
-                                <p>Tipo 2: @(pokemon.Tipo2 ?? "Nenhum")</p>
-                            </div>
-                            <div class="poke-baixo">
-                                <button onclick="editarPokemon(@pokemon.PokemonId)" class="botao-editar">Editar</button>
-                                <button onclick="excluirPokemon(@pokemon.PokemonId)" class="botao-excluir">Excluir</button>
-                            </div>
-                        </div>
-                    }
-                </div>
+<div class="pokemon-layer-1">
+    @foreach (var pokemon in ViewBag.Pokemons ?? new List<Pokemon>())
+    {
+        <div class="pokemon-1" data-id="@pokemon.PokemonId">
+
+            <div class="poke-cima">
+                <p>Nome: @pokemon.Nome</p>
+                <p>Tipo: @pokemon.Tipo</p>
+                <p>Tipo 2: @(pokemon.Tipo2 ?? "Nenhum")</p>
+            </div>
+
+          
+            <div class="poke-imagem" ">
+                <img src="@(!string.IsNullOrEmpty(pokemon.Imagem) 
+                        ? pokemon.Imagem 
+                        : "/assets/pokemon-placeholder.png")"
+                     alt="@pokemon.Nome"
+                     class="imagem-pokemon"
+                     >
+            </div>
+
+            <div class="poke-baixo">
+                <button onclick="editarPokemon(@pokemon.PokemonId)" class="botao-editar">Editar</button>
+                <button onclick="excluirPokemon(@pokemon.PokemonId)" class="botao-excluir">Excluir</button>
+            </div>
+        </div>
+    }
+</div>
+
 
                 <div class="add-layer">
                     <button class="botao-add" id="botao-add">+ adicionar pokemon</button> <!-- Mantém ID aqui -->
@@ -116,9 +123,7 @@
     </div>
 
 
-    <script>
-        const pokemons = @Html.Raw(pokemonsJson);  // Define pokemons com os dados do backend
-    </script>
+
 </body>
 
 </html>

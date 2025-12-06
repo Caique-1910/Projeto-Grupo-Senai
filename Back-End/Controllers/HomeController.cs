@@ -25,11 +25,14 @@ public class HomeController : Controller
 
         ViewBag.Usuario = HttpContext.Session.GetString("UsuarioNome");
 
-        // Carrega os Pokémons do usuário logado
+        // Carrega todos os pikomon do safado ai logado na sessao
         var usuarioId = HttpContext.Session.GetInt32("UsuarioId");
         if (usuarioId.HasValue)
         {
-            var pokemons = _context.Pokemons.Where(p => p.IdUsuario == usuarioId.Value).ToList();
+            var pokemons = _context.Pokemons
+                .Where(p => p.IdUsuario == usuarioId.Value)
+                .ToList(); // isso aqui e pras image carregar pdp
+
             ViewBag.Pokemons = pokemons;
         }
         else
