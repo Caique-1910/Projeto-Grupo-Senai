@@ -370,20 +370,21 @@ form {
     z-index: 1000;
     position: absolute;
     left: 0;
-    width: 14%;
-    height: 100%;
-    margin-left: -250px; /* Escondida por padrão */
+    width: 17%;
+    height: 145vh;
+    margin-left: -350px; 
     overflow-y: auto;
-    background: #060027;
-    border: 0.125rem solid #cd290c;
+    background: #362D3E;
+    border: 0.225rem solid #cd290c;
     font-size: medium;
     display: flex;
     flex-direction: column;
-    transition: margin-left 0.3s ease; /* Animação suave */
+    transition: margin-left 0.3s ease; 
+    margin-top: 20px;
 }
 
 #sidebar.active {
-    margin-left: 0; /* Sidebar visível */
+    margin-left: 0; 
 }
 
 .config, .exit, .imgUsuario {
