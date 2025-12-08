@@ -2125,5 +2125,5 @@ C:\Users\53450061801\Desktop\TantoFaz\Projeto-Grupo-Senai\Back-End\obj\Debug\net
 C:\Users\53450061801\Desktop\TantoFaz\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\ref\BackEndProjeto.dll
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\m04wysk83n-q8kozvni40.gz
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-69dzlbtke7.gz
-C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-a97hok9rnd.gz
 C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\8zvcbfi61l-x77kx4649l.gz
+C:\Users\Dudu\Desktop\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-jn6stnlklz.gz

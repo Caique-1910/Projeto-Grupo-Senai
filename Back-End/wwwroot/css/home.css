@@ -209,6 +209,7 @@ main {
 }
 
 .botao-editar,
+.botao-cancelar2,
 .botao-excluir,
 .botao-add-interno,
 .botao-add,
@@ -232,6 +233,7 @@ main {
 
 .botao-editar:hover,
 .botao-excluir:hover,
+.botao-cancelar2:hover,
 .botao-add:hover,
 .botao-add-interno:hover,
 .botao-salvar:hover,
@@ -242,9 +244,6 @@ main {
 }
 
 .aviso-seguranca {
-    background-color: #000000;
-    color: #cd290c;
-    border: 0.125rem solid #cd290c;
     border-radius: 0.75rem;
     padding: 0.8vh 1.5vw;
     font-size: 0.9rem;
@@ -391,4 +390,28 @@ form {
     margin-bottom: 25%;
     margin-top: 20%;
     color: #cd290c;
+}
+
+.botao-add-interno {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 95%;
+}
+
+.botao-cancelar2,.botao-confirmacao{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+}
+
+.acoes-div-baixo-esq{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    margin-top: 18vh;
+    margin-bottom: 3vh;
 }
