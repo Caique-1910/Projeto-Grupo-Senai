@@ -21,6 +21,9 @@ const inputTipo = document.querySelector('input[name="Tipo"]');
 const inputTipo2 = document.querySelector('input[name="Tipo2"]');
 const inputPokemonId = document.querySelector('input[name="PokemonId"]');
 
+const botaoSidebar = document.querySelector('.botaoSidebar');
+const sidebar = document.getElementById('sidebar');
+
 
 // 1 — DELEGAÇÃO DE EVENTO PARA EDITAR / EXCLUIR
 
@@ -130,3 +133,21 @@ function limparFormulario() {
     inputTipo2.value = '';
     inputPokemonId.value = 0;
 }
+
+
+
+
+botaoSidebar.addEventListener('click', function() {
+    sidebar.classList.toggle('active');
+});
+
+// Fechar ao clicar fora da sidebar
+document.addEventListener('click', function(event) {
+    const isClickInsideSidebar = sidebar.contains(event.target);
+    const isClickOnButton = botaoSidebar.contains(event.target);
+    
+    if (!isClickInsideSidebar && !isClickOnButton && sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+    }
+});
+
