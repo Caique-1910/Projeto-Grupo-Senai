@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\53450061801\\Desktop\\ProjetoPokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\53450061801\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\52918563862\\Desktop\\Pokedex2.0\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\52918563862\\Desktop\\Pokedex2.0\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\52918563862\\Desktop\\Pokedex2.0\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+        "projectName": "BackEndProjeto",
+        "projectPath": "C:\\Users\\52918563862\\Desktop\\Pokedex2.0\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+        "packagesPath": "C:\\Users\\52918563862\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\52918563862\\Desktop\\Pokedex2.0\\Projeto-Grupo-Senai\\Back-End\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\52918563862\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 1ae6fa29ad5ce7ec410587c12ef41bd32a980056
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -84,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

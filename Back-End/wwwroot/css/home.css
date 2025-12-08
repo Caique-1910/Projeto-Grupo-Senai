@@ -74,6 +74,14 @@ aside {
     align-items: center;
 }
 
+.texto1 {
+    display: none;
+}
+
+.texto2 {
+    display: none;
+}
+
 .joystick,
 .botao-a,
 .botao-b {

@@ -67,6 +67,9 @@ function editarPokemon(id) {
 
     // Esconder botão de adicionar interno
     botaoAdicionarInterno.style.display = 'none';
+
+    texto2.style.display = 'flex';
+    texto1.style.display = 'none';
 }
 
 
@@ -86,6 +89,8 @@ botaoAdicionar.addEventListener('click', () => {
     aparecerLayout.style.display = 'flex';
     layoutConfirmar.style.display = 'none';
     botaoAdicionarInterno.style.display = 'flex';
+    texto1.style.display = 'flex';
+    texto2.style.display = 'none';
 });
 
 
