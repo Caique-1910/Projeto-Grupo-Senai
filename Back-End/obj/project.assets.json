@@ -7851,34 +7851,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\53450061801\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\52918563862\\.nuget\\packages\\": {}
->>>>>>> 1ae6fa29ad5ce7ec410587c12ef41bd32a980056
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\53450061801\\Desktop\\ProjetoPokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+      "projectUniqueName": "C:\\Users\\52918563862\\Desktop\\Pokemon3.0\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
       "projectName": "BackEndProjeto",
-      "projectPath": "C:\\Users\\53450061801\\Desktop\\ProjetoPokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
-      "packagesPath": "C:\\Users\\53450061801\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\53450061801\\Desktop\\ProjetoPokedex\\Projeto-Grupo-Senai\\Back-End\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\53450061801\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-      "projectUniqueName": "C:\\Users\\52918563862\\Desktop\\Pokedex2.0\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
-      "projectName": "BackEndProjeto",
-      "projectPath": "C:\\Users\\52918563862\\Desktop\\Pokedex2.0\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+      "projectPath": "C:\\Users\\52918563862\\Desktop\\Pokemon3.0\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
       "packagesPath": "C:\\Users\\52918563862\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\52918563862\\Desktop\\Pokedex2.0\\Projeto-Grupo-Senai\\Back-End\\obj\\",
+      "outputPath": "C:\\Users\\52918563862\\Desktop\\Pokemon3.0\\Projeto-Grupo-Senai\\Back-End\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\52918563862\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> 1ae6fa29ad5ce7ec410587c12ef41bd32a980056
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -7951,5 +7936,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\52918563862\\Desktop\\Pokemon3.0\\Projeto-Grupo-Senai\\Back-End\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

@@ -24,6 +24,10 @@ const inputPokemonId = document.querySelector('input[name="PokemonId"]');
 const botaoSidebar = document.querySelector('.botaoSidebar');
 const sidebar = document.getElementById('sidebar');
 
+const texto1 = document.getElementById('texto1');
+const texto2 = document.getElementById('texto2');
+
+
 
 // 1 — DELEGAÇÃO DE EVENTO PARA EDITAR / EXCLUIR
 
