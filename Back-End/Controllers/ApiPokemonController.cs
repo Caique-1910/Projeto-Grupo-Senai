@@ -24,7 +24,7 @@ namespace Back_End.Controllers
             bool nomeValido = await _apiPokemonService.NomeValidoAsync(model.Nome);
             if (!nomeValido)
             {
-                ModelState.AddModelError("", "Digite um Pokémon que exista.");
+                ModelState.AddModelError("", "Digite um Pokemon que exista.");
                 return View(model);
             }
 

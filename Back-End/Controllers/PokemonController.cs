@@ -39,15 +39,12 @@ namespace BackEndProjeto.Controllers
             bool nomeValido = await _apiPokemonService.NomeValidoAsync(pokemon.Nome);
             if (!nomeValido)
             {
-                TempData["Error"] = "Esse Pokémon não existe.";
+                TempData["Error"] = "Esse Pokemon nao existe.";
                 return RedirectToAction("Index", "Home");
             }
 
             // Dono dos pikomon ai pra quem ta lendo os coment
             pokemon.IdUsuario = usuarioId.Value;
-
-
-            
 
             
             //  SE EXISTE EDITA

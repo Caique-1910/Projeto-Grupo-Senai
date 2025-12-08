@@ -27,7 +27,6 @@ public class HomeController : Controller
 
         // Carrega todos os pikomon do safado ai logado na sessao
         var usuarioId = HttpContext.Session.GetInt32("UsuarioId");
-        
         if (usuarioId.HasValue)
         {
             var pokemons = _context.Pokemons
@@ -41,11 +40,6 @@ public class HomeController : Controller
             ViewBag.Pokemons = new List<Pokemon>();
         }
 
-
         return View();
-
-        
-        
-        
     }
 }

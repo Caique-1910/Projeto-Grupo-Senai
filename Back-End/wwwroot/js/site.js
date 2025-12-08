@@ -21,13 +21,6 @@ const inputTipo = document.querySelector('input[name="Tipo"]');
 const inputTipo2 = document.querySelector('input[name="Tipo2"]');
 const inputPokemonId = document.querySelector('input[name="PokemonId"]');
 
-const botaoSidebar = document.querySelector('.botaoSidebar');
-const sidebar = document.getElementById('sidebar');
-
-const texto1 = document.getElementById('texto1');
-const texto2 = document.getElementById('texto2');
-
-
 
 // 1 — DELEGAÇÃO DE EVENTO PARA EDITAR / EXCLUIR
 
@@ -71,9 +64,6 @@ function editarPokemon(id) {
 
     // Esconder botão de adicionar interno
     botaoAdicionarInterno.style.display = 'none';
-
-    texto2.style.display = 'flex';
-    texto1.style.display = 'none';
 }
 
 
@@ -93,8 +83,6 @@ botaoAdicionar.addEventListener('click', () => {
     aparecerLayout.style.display = 'flex';
     layoutConfirmar.style.display = 'none';
     botaoAdicionarInterno.style.display = 'flex';
-    texto1.style.display = 'flex';
-    texto2.style.display = 'none';
 });
 
 
@@ -142,21 +130,3 @@ function limparFormulario() {
     inputTipo2.value = '';
     inputPokemonId.value = 0;
 }
-
-
-
-
-botaoSidebar.addEventListener('click', function() {
-    sidebar.classList.toggle('active');
-});
-
-// Fechar ao clicar fora da sidebar
-document.addEventListener('click', function(event) {
-    const isClickInsideSidebar = sidebar.contains(event.target);
-    const isClickOnButton = botaoSidebar.contains(event.target);
-    
-    if (!isClickInsideSidebar && !isClickOnButton && sidebar.classList.contains('active')) {
-        sidebar.classList.remove('active');
-    }
-});
-
