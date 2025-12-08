@@ -140,3 +140,20 @@ function limparFormulario() {
     inputPokemonId.value = 0;
 }
 
+const botaoSidebar = document.querySelector('.botaoSidebar');
+const sidebar = document.getElementById('sidebar');
+
+
+botaoSidebar.addEventListener('click', function() {
+    sidebar.classList.toggle('active');
+});
+
+// Fechar ao clicar fora da sidebar
+document.addEventListener('click', function(event) {
+    const isClickInsideSidebar = sidebar.contains(event.target);
+    const isClickOnButton = botaoSidebar.contains(event.target);
+    
+    if (!isClickInsideSidebar && !isClickOnButton && sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+    }
+});

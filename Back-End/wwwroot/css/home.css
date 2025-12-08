@@ -27,7 +27,7 @@ header {
     align-items: center;
     padding: 2vh 3vw;
     width: 100%;
-    max-width: 90vw;
+    max-width: 100vw;
     background-color: #362D3E;
     border-bottom: 0.25rem solid #cd290c;
     box-shadow: 0 0 1rem #cd290c88;
@@ -364,4 +364,30 @@ form {
     border-radius: 10px;
     background-color: #000000;
     image-rendering:pixelated;
+}
+
+#sidebar {
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    width: 14%;
+    height: 100%;
+    margin-left: -250px; /* Escondida por padrão */
+    overflow-y: auto;
+    background: #060027;
+    border: 0.125rem solid #cd290c;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease; /* Animação suave */
+}
+
+#sidebar.active {
+    margin-left: 0; /* Sidebar visível */
+}
+
+.config, .exit, .imgUsuario {
+    margin-bottom: 25%;
+    margin-top: 20%;
+    color: #cd290c;
 }
