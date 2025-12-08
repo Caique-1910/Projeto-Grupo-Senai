@@ -166,7 +166,7 @@ main {
     color: #cd290c;
     width: 22vw;
     max-width: 23rem;
-    height: 38vh;
+    height: 42vh;
     max-height: 25rem;
     display: flex;
     flex-direction: column;
@@ -190,7 +190,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5vh;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: 700;
     text-shadow: 0 0 0.3rem #cd290c;
 }
