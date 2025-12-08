@@ -46,6 +46,9 @@ namespace BackEndProjeto.Controllers
             // Dono dos pikomon ai pra quem ta lendo os coment
             pokemon.IdUsuario = usuarioId.Value;
 
+
+            
+
             
             //  SE EXISTE EDITA
             

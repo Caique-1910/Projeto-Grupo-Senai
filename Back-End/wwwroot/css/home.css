@@ -74,6 +74,14 @@ aside {
     align-items: center;
 }
 
+.texto1 {
+    display: none;
+}
+
+.texto2 {
+    display: none;
+}
+
 .joystick,
 .botao-a,
 .botao-b {
@@ -362,5 +370,5 @@ form {
     box-shadow: rgba(205, 41, 12, 0.533) 0px 0px 1rem;
     border-radius: 10px;
     background-color: #000000;
-    image-rendering:pixelated;
+    image-rendering: pixelated;
 }

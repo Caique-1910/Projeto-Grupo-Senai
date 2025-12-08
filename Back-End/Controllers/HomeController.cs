@@ -40,6 +40,7 @@ public class HomeController : Controller
             ViewBag.Pokemons = new List<Pokemon>();
         }
 
+
         return View();
     }
 }
