@@ -144,22 +144,26 @@ const botaoSidebar = document.querySelector('.botaoSidebar');
 const sidebar = document.getElementById('sidebar');
 
 
-botaoSidebar.addEventListener('click', function() {
+botaoSidebar.addEventListener('click', function () {
     sidebar.classList.toggle('active');
+
+    if (aConfig.classList.toggle('active')) {
+        aConfig.classList.remove('active');
+    }
 });
 
 // Fechar ao clicar fora da sidebar
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const isClickInsideSidebar = sidebar.contains(event.target);
-    const isClickOnButton = botaoSidebar.contains(event.target);
     const isClickInsideConf = aConfig.contains(event.target);
+    const isClickOnButton = botaoSidebar.contains(event.target);
 
-    
+
     if (!isClickInsideSidebar && !isClickOnButton && sidebar.classList.contains('active')) {
         sidebar.classList.remove('active');
     }
 
-      if (!isClickInsideConf && !isClickOnButton && aConfig.classList.contains('active')) {
+    if (!isClickInsideConf && !isClickOnButton && aConfig.classList.contains('active')) {
         aConfig.classList.remove('active');
     }
 });
@@ -168,10 +172,11 @@ document.addEventListener('click', function(event) {
 const aConfig = document.getElementById('config');
 const configuracoes = document.getElementById('configuracoes');
 const mudarTemaBtn = document.getElementById("muda-tema");
+const exitConf = document.getElementById('exitConf');
 const body = document.body;
 
 
-aConfig.addEventListener('click', function(event) {
+aConfig.addEventListener('click', function (event) {
     sidebar.classList.remove('active');
     configuracoes.classList.toggle('active');
 });
@@ -193,7 +198,10 @@ btnTema.addEventListener("click", () => {
     }
 });
 
-
+exitConf.addEventListener("click", function () {
+    aConfig.classList.remove('active');
+    sidebar.classList.toggle('active');
+})
 
 
 
