@@ -152,8 +152,48 @@ botaoSidebar.addEventListener('click', function() {
 document.addEventListener('click', function(event) {
     const isClickInsideSidebar = sidebar.contains(event.target);
     const isClickOnButton = botaoSidebar.contains(event.target);
+    const isClickInsideConf = aConfig.contains(event.target);
+
     
     if (!isClickInsideSidebar && !isClickOnButton && sidebar.classList.contains('active')) {
         sidebar.classList.remove('active');
     }
+
+      if (!isClickInsideConf && !isClickOnButton && aConfig.classList.contains('active')) {
+        aConfig.classList.remove('active');
+    }
 });
+
+
+const aConfig = document.getElementById('config');
+const configuracoes = document.getElementById('configuracoes');
+const mudarTemaBtn = document.getElementById("muda-tema");
+const body = document.body;
+
+
+aConfig.addEventListener('click', function(event) {
+    sidebar.classList.remove('active');
+    configuracoes.classList.toggle('active');
+});
+
+
+const btnTema = document.getElementById("muda-tema");
+
+btnTema.addEventListener("click", () => {
+    const body = document.body;
+
+    const temaAtual = body.getAttribute("data-tema");
+
+    if (temaAtual === "claro") {
+        body.setAttribute("data-tema", "escuro");
+        localStorage.setItem("tema", "escuro");
+    } else {
+        body.setAttribute("data-tema", "claro");
+        localStorage.setItem("tema", "claro");
+    }
+});
+
+
+
+
+
