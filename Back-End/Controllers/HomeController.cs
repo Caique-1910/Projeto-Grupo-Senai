@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BackEndProjeto.Data;
 
+
 namespace BackEndProjeto.Controllers;
 
 public class HomeController : Controller

@@ -69,7 +69,7 @@ function editarPokemon(id) {
     // Esconder botão de adicionar interno
     botaoAdicionarInterno.style.display = 'none';
 
-        texto2.style.display = 'flex';
+    texto2.style.display = 'flex';
     texto1.style.display = 'none';
 }
 

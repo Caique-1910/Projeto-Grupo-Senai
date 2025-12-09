@@ -1,4 +1,5 @@
-﻿@{
+﻿@model BackEndProjeto.Models.Usuario
+@{
     Layout = null;
     var pokemonsJson = System.Text.Json.JsonSerializer.Serialize(ViewBag.Pokemons ?? new List<Pokemon>());
 }
@@ -27,10 +28,6 @@
         <div class="logo">
             <img class="botaoSidebar" src="assets/1158.png" alt="Pokebola">
         <aside id="sidebar" class="sidebar">
-        <a href="#" class="imgUsuario">
-            <img src="" alt="Usuario">
-        </a>
-        <a href="#" class="config">Configurações</a>
         <a href="~/Login/Sair" class="exit">Sair</a>
       </aside>   
         </div>
@@ -72,7 +69,7 @@
             </div>
 
           
-            <div class="poke-imagem" ">
+            <div class="poke-imagem">
                 <img src="@(!string.IsNullOrEmpty(pokemon.Imagem) 
                         ? pokemon.Imagem 
                         : "/assets/pokemon-placeholder.png")"
