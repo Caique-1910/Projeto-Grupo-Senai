@@ -415,3 +415,7 @@ form {
     margin-top: 18vh;
     margin-bottom: 3vh;
 }
+
+a{
+    text-decoration: none
+}
