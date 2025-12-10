@@ -7,6 +7,7 @@ const botaoAdicionarInterno = document.getElementById('botao-add-interno');
 const botaoSalvar = document.getElementById('botao-salvar');
 const botaoCancelar1 = document.getElementById('botao-cancelar1');
 const botaoCancelar2 = document.getElementById('botao-cancelar2');
+const botaoCancelaradd = document.getElementById('botao-cancelar-add');
 const exclusaoElement = document.getElementById('botao-confirmacao');
 
 const formAdicionar = document.querySelector('form[action="/Pokemon/Create"]');
@@ -68,6 +69,7 @@ function editarPokemon(id) {
 
     // Esconder botão de adicionar interno
     botaoAdicionarInterno.style.display = 'none';
+    botaoCancelaradd = style.display = 'none'
 
     texto2.style.display = 'flex';
     texto1.style.display = 'none';
@@ -90,6 +92,7 @@ botaoAdicionar.addEventListener('click', () => {
     aparecerLayout.style.display = 'flex';
     layoutConfirmar.style.display = 'none';
     botaoAdicionarInterno.style.display = 'flex';
+    botaoCancelaradd.style.display = 'flex';
     texto1.style.display = 'flex';
     texto2.style.display = 'none';
 });
@@ -124,6 +127,11 @@ botaoCancelar2.addEventListener('click', () => {
 });
 
 
+botaoCancelaradd.addEventListener('click', () => {
+    aparecerLayout.style.display = 'none';
+})
+
+
 // 9 — CONFIRMAR EXCLUSÃO
 
 exclusaoElement.addEventListener('click', () => {
@@ -143,19 +151,18 @@ function limparFormulario() {
 const botaoSidebar = document.querySelector('.botaoSidebar');
 const sidebar = document.getElementById('sidebar');
 
-
+// Botao sidebar na logo
 botaoSidebar.addEventListener('click', function () {
     sidebar.classList.toggle('active');
 
     if (aConfig.classList.toggle('active')) {
-        aConfig.classList.remove('active');
+        configuracoes.classList.remove('active');
     }
 });
 
 // Fechar ao clicar fora da sidebar
 document.addEventListener('click', function (event) {
     const isClickInsideSidebar = sidebar.contains(event.target);
-    const isClickInsideConf = aConfig.contains(event.target);
     const isClickOnButton = botaoSidebar.contains(event.target);
 
 
@@ -163,19 +170,17 @@ document.addEventListener('click', function (event) {
         sidebar.classList.remove('active');
     }
 
-    if (!isClickInsideConf && !isClickOnButton && aConfig.classList.contains('active')) {
-        aConfig.classList.remove('active');
-    }
 });
+
+
 
 
 const aConfig = document.getElementById('config');
 const configuracoes = document.getElementById('configuracoes');
 const mudarTemaBtn = document.getElementById("muda-tema");
 const exitConf = document.getElementById('exitConf');
-const body = document.body;
 
-
+// Parte da configuracao dentro do sidebar
 aConfig.addEventListener('click', function (event) {
     sidebar.classList.remove('active');
     configuracoes.classList.toggle('active');
@@ -184,6 +189,7 @@ aConfig.addEventListener('click', function (event) {
 
 const btnTema = document.getElementById("muda-tema");
 
+// Botao para mudar de escuro(padrao) para claro
 btnTema.addEventListener("click", () => {
     const body = document.body;
 
@@ -198,10 +204,11 @@ btnTema.addEventListener("click", () => {
     }
 });
 
+// Fechar as configuracoes
 exitConf.addEventListener("click", function () {
-    aConfig.classList.remove('active');
-    sidebar.classList.toggle('active');
+    configuracoes.classList.remove('active');
 })
+
 
 
 

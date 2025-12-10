@@ -229,10 +229,12 @@ main {
 .botao-excluir,
 .botao-add-interno,
 .botao-add,
+.botao-cancelar-add,
 .botao-add2,
 .botao-salvar,
 .botao-cancelar,
-.botao-confirmacao {
+.botao-confirmacao
+ {
     background-color: #000000;
     color: var(--coPrin);
     border: 0.125rem solid var(--coPrin);
@@ -252,9 +254,10 @@ main {
 .botao-cancelar2:hover,
 .botao-add:hover,
 .botao-add-interno:hover,
+.botao-cancelar-add:hover,
 .botao-salvar:hover,
 .botao-cancelar:hover,
-.botao-confirmacao:hover {
+.botao-confirmacao:hover{
     background-color: var(--coPrin);
     color: #000000;
 }
@@ -429,7 +432,8 @@ form {
     color: var(--coPrin);
 }
 
-.botao-add-interno {
+.botao-add-interno,
+.botao-cancelar-add {
     display: flex;
     justify-content: center;
     align-items: center; 
