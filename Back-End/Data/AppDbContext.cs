@@ -61,6 +61,9 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.SenhaHash)
                 .HasMaxLength(128)
                 .IsUnicode(false);
+                entity.Property(e => e.GoogleId)
+    .HasMaxLength(200)
+    .IsUnicode(false);
         });
 
         OnModelCreatingPartial(modelBuilder);
