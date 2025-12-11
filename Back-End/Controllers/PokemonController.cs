@@ -4,6 +4,7 @@ using BackEndProjeto.Models;
 using BackEndProjeto.Services;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace BackEndProjeto.Controllers
 {
@@ -22,13 +23,34 @@ namespace BackEndProjeto.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] Pokemon pokemon)
         {
-            var usuarioId = HttpContext.Session.GetInt32("UsuarioId");
+            // Verifica login via Google (Claims) antes do Session padrão
+            // Isso permite que tanto login manual quanto login Google funcionem corretamente
+            var userEmail = User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Email)?.Value;
+
+            int? usuarioId = null;
+
+            if (userEmail != null)
+            {
+                // Busca usuário por email se estiver usando Google
+                var usuario = _context.Usuarios.FirstOrDefault(u => u.Email == userEmail);
+                if (usuario != null)
+                {
+                    usuarioId = usuario.UsuarioId;
+                }
+            }
+            else
+            {
+                // Caso não seja login Google, usa Session normal
+                usuarioId = HttpContext.Session.GetInt32("UsuarioId");
+            }
+
             if (usuarioId == null)
             {
                 TempData["Error"] = "Usuário não logado.";
                 return RedirectToAction("Index", "Home");
             }
 
+            // Validação básica dos campos obrigatórios
             if (string.IsNullOrEmpty(pokemon.Nome) || string.IsNullOrEmpty(pokemon.Tipo))
             {
                 TempData["Error"] = "Nome e Tipo são obrigatórios.";
@@ -46,11 +68,10 @@ namespace BackEndProjeto.Controllers
             // Dono dos pikomon ai pra quem ta lendo os coment
             pokemon.IdUsuario = usuarioId.Value;
 
-            
-            //  SE EXISTE EDITA
-            
+            // Verifica se é edição
             if (pokemon.PokemonId > 0)
             {
+                // Busca somente Pokémon do usuário
                 var existingPokemon = _context.Pokemons
                     .FirstOrDefault(p => p.PokemonId == pokemon.PokemonId && p.IdUsuario == usuarioId);
 
@@ -60,12 +81,12 @@ namespace BackEndProjeto.Controllers
                     return RedirectToAction("Index", "Home");
                 }
 
-                // Atualiza campos
+                // Atualiza campos principais
                 existingPokemon.Nome = pokemon.Nome;
                 existingPokemon.Tipo = pokemon.Tipo;
                 existingPokemon.Tipo2 = pokemon.Tipo2;
 
-                //  SE O NOME FOR ALTERADO BUSCA OTRA IMAGE
+                // Se o nome for alterado, busca nova imagem
                 existingPokemon.Imagem = await _apiPokemonService.BuscarImagemAsync(pokemon.Nome);
 
                 _context.SaveChanges();
@@ -74,14 +95,11 @@ namespace BackEndProjeto.Controllers
             }
             else
             {
-
-                // BUSCA A IMAGEM NA API E SALVA NO BANCO - esse aqui eu amassei mesmo (dudu)
+                // Busca a imagem na API e salva no banco - esse aqui eu amassei mesmo (dudu)
                 pokemon.Imagem = await _apiPokemonService.BuscarImagemAsync(pokemon.Nome);
 
                 _context.Pokemons.Add(pokemon);
                 _context.SaveChanges();
-
-                
             }
 
             return RedirectToAction("Index", "Home");
@@ -92,12 +110,14 @@ namespace BackEndProjeto.Controllers
         public IActionResult Delete(int pokemonId)
         {
             var usuarioId = HttpContext.Session.GetInt32("UsuarioId");
+
             if (usuarioId == null)
             {
                 TempData["Error"] = "Usuário não logado.";
                 return RedirectToAction("Index", "Home");
             }
 
+            // Busca Pokémon pertencente ao usuário
             var pokemon = _context.Pokemons
                 .FirstOrDefault(p => p.PokemonId == pokemonId && p.IdUsuario == usuarioId);
 

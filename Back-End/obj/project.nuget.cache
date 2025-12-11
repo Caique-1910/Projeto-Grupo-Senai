@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ne0W+SOt7k4=",
+  "dgSpecHash": "vGKKIir5gD8=",
   "success": true,
   "projectFilePath": "C:\\Users\\44438098807\\Desktop\\ddsaw\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\44438098807\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\44438098807\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\44438098807\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\44438098807\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\9.0.0\\microsoft.aspnetcore.authentication.google.9.0.0.nupkg.sha512",
     "C:\\Users\\44438098807\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.24\\microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "C:\\Users\\44438098807\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\44438098807\\.nuget\\packages\\microsoft.build\\17.7.2\\microsoft.build.17.7.2.nupkg.sha512",
@@ -164,5 +165,15 @@
     "C:\\Users\\44438098807\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\44438098807\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\44438098807\\Desktop\\ddsaw\\Projeto-Grupo-Senai\\Back-End\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\44438098807\\Desktop\\ddsaw\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\44438098807\\Desktop\\ddsaw\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

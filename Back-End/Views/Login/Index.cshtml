@@ -48,10 +48,15 @@
 
     <aside class="login-alternativo">
       <h2>Ou Use</h2>
-      <img class="google" src="~/assets/google.png" alt="Google Login">
+
+      <a asp-controller="Login" asp-action="LoginGoogle">
+        <img class="google" src="~/assets/google.png" alt="Google Login">
+      </a>
+
       <a asp-controller="EsqueciSenha" asp-action="Index">Esqueceu sua senha?</a>
     </aside>
   </main>
 
 </body>
+
 </html>
