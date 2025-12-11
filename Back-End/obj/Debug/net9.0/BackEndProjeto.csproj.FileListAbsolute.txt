@@ -2128,7 +2128,6 @@ C:\Users\52918563862\Desktop\Pokemon5.0\Projeto-Grupo-Senai\Back-End\obj\Debug\n
 C:\Users\52918563862\Desktop\Pokemon5.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-fpg71lz48z.gz
 C:\Users\52918563862\Desktop\Pokemon5.0\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-pcpn013bjo.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\bin\Debug\net9.0\appsettings.Development.json
-C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\bin\Debug\net9.0\appsettings.json
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\bin\Debug\net9.0\BackEndProjeto.staticwebassets.runtime.json
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\bin\Debug\net9.0\BackEndProjeto.staticwebassets.endpoints.json
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\bin\Debug\net9.0\BackEndProjeto.exe
@@ -2378,10 +2377,8 @@ C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\e7741i4d2j-aegj6krkaa.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\le8avknoc9-ackcsvpagb.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\m04wysk83n-q8kozvni40.gz
-C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-fpg71lz48z.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\o31e8hspcl-2gha6h3521.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\tdigv650v9-61n19gt1b8.gz
-C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-pcpn013bjo.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\rga7sxwxcg-ibxccxlad2.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\t07c08rc0g-ibxccxlad2.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\staticwebassets.build.json
@@ -2395,3 +2392,6 @@ C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\BackEndProjeto.genruntimeconfig.cache
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\ref\BackEndProjeto.dll
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\8zvcbfi61l-5qzkqdc79n.gz
+C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\bin\Debug\net9.0\appsettings.json
+C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-sc5y97f4bf.gz
+C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-jrdazurvaz.gz

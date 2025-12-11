@@ -1,27 +1,25 @@
 @{
-  Layout = null;
+    Layout = null;
 }
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="~/css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/login.css">
 </head>
-
 <body>
 
   <main>
-
+   
     <section class="login">
       <h1>Iniciar Sessão</h1>
 
-
+      
       <form asp-action="Entrar" asp-controller="Login" method="post">
-
+        
         <div class="logar">
 
           <label for="email">Email</label>
@@ -32,18 +30,18 @@
 
         </div>
 
-
+        
         <div class="erro" style="color:red; margin-top:10px;">
-          @ViewBag.Erro
+            @ViewBag.Erro
         </div>
 
         <div class="botoes">
           <button class="entrar" type="submit">Entrar</button>
           <a class="registrar" href="~/Cadastro/Index">
-            Registre-se
-          </a>
+    Registre-se
+</a>
         </div>
-
+      
       </form>
 
     </section>
