@@ -1,9 +1,10 @@
-﻿@{
+﻿@model BackEndProjeto.Models.Usuario
+@{
     Layout = null;
     var pokemonsJson = System.Text.Json.JsonSerializer.Serialize(ViewBag.Pokemons ?? new List<Pokemon>());
 }
 
- @* isso serve para retornar o erro que o caique fez a la nas controllers da API *@
+@* isso serve para retornar o erro que o caique fez a la nas controllers da  *@
 @if (TempData["Error"] != null)
 {
     <script>
@@ -22,10 +23,21 @@
     <script src="~/js/site.js" defer></script>
 </head>
 
-<body>
+<body data-tema="escuro">
+
     <header>
         <div class="logo">
-            <img src="assets/1158.png" alt="Pokebola">
+            <img class="botaoSidebar" src="assets/1158.png" alt="Pokebola">
+
+            <aside id="sidebar" class="sidebar">
+                <a href="#" class="config" id="config">Configuracoes</a>
+                <a href="~/Login/Sair" class="exit">Sair</a>
+            </aside>
+
+            <aside id="configuracoes" class="configuracoes">
+                <a href="#" class="muda-tema" id="muda-tema">Mude o tema</a>
+                <a href="#" class="exit" id="exitConf">Fechar</a>
+            </aside>
         </div>
         <div class="cabecalho">
             <h1>Pokedex</h1>
@@ -43,44 +55,43 @@
         <main>
             <section class="container-cima">
                 <div class="buscar">
-                    <div class="busca-nome">
-                        <input type="text" placeholder="Buscar por nome">
+                    <div class="busca-nome" id="busca-nome">
+                        <input id="input-busca-nome" type="text" placeholder="Buscar por nome">
                         <img class="lupa" src="assets/rlupa.svg" alt="">
                     </div>
-                    <div class="busca-tipo">
-                        <input type="text" placeholder="Buscar por tipo">
+
+                    <div class="busca-tipo" id="busca-tipo">
+                        <input id="input-busca-tipo" type="text" placeholder="Buscar por tipo">
                         <img class="seta" src="assets/rseta.svg" alt="">
                     </div>
                 </div>
 
-<div class="pokemon-layer-1">
-    @foreach (var pokemon in ViewBag.Pokemons ?? new List<Pokemon>())
-    {
-        <div class="pokemon-1" data-id="@pokemon.PokemonId">
+                <div class="pokemon-layer-1" id="pokemon-layer">
+                    @foreach (var pokemon in ViewBag.Pokemons ?? new List<Pokemon>())
+                    {
+                        <div class="pokemon-1" data-id="@pokemon.PokemonId">
 
-            <div class="poke-cima">
-                <p>Nome: @pokemon.Nome</p>
-                <p>Tipo: @pokemon.Tipo</p>
-                <p>Tipo 2: @(pokemon.Tipo2 ?? "Nenhum")</p>
-            </div>
+                            <div class="poke-cima" id="poke-cima">
+                                <p>Nome: @pokemon.Nome</p>
+                                <p>Tipo: @pokemon.Tipo</p>
+                                <p>Tipo 2: @(pokemon.Tipo2 ?? "Nenhum")</p>
+                            </div>
 
-          
-            <div class="poke-imagem" ">
-                <img src="@(!string.IsNullOrEmpty(pokemon.Imagem) 
-                        ? pokemon.Imagem 
-                        : "/assets/pokemon-placeholder.png")"
-                     alt="@pokemon.Nome"
-                     class="imagem-pokemon"
-                     >
-            </div>
 
-            <div class="poke-baixo">
-                <button onclick="editarPokemon(@pokemon.PokemonId)" class="botao-editar">Editar</button>
-                <button onclick="excluirPokemon(@pokemon.PokemonId)" class="botao-excluir">Excluir</button>
-            </div>
-        </div>
-    }
-</div>
+                            <div class="poke-imagem">
+                                <img src="@(!string.IsNullOrEmpty(pokemon.Imagem) 
+                                                                                                  ? pokemon.Imagem 
+                                                                                                  : "/assets/pokemon-placeholder.png")" alt="@pokemon.Nome"
+                                    class="imagem-pokemon">
+                            </div>
+
+                            <div class="poke-baixo">
+                                <button onclick="editarPokemon(@pokemon.PokemonId)" class="botao-editar">Editar</button>
+                                <button onclick="excluirPokemon(@pokemon.PokemonId)" class="botao-excluir">Excluir</button>
+                            </div>
+                        </div>
+                    }
+                </div>
 
 
                 <div class="add-layer">
@@ -92,7 +103,7 @@
                 <div class="add-baixo-esq" id="add-baixo-esq">
                     <div class="add-layer">
                         <form action="/Pokemon/Create" method="post">
-
+                        
                             <input type="hidden" name="PokemonId" value="0">
                             <div class="add-nome">
                                 <input type="text" name="Nome" placeholder="Nome:" required>
@@ -111,6 +122,7 @@
                             </div>
                             <button type="button" class="botao-add-interno" id="botao-add-interno">+ adicionar
                                 pokemon</button>
+                            <button type="button" class="botao-cancelar-add" id="botao-cancelar-add">Cancelar</button>
 
                         </form>
                     </div>
@@ -121,16 +133,18 @@
                     <form id="form-excluir" action="/Pokemon/Delete" method="post">
                         <input type="hidden" name="pokemonId" id="pokemon-id-excluir">
                     </form>
-                    <button type="button" class="botao-confirmacao" id="botao-confirmacao">Sim, excluir</button>
-                    <button type="button" class="botao-cancelar" id="botao-cancelar2">Cancelar</button>
+                    <div class="acoes-div-baixo-esq">
+                        <button type="button" class="botao-confirmacao" id="botao-confirmacao">Sim, excluir</button>
+                        <button type="button" class="botao-cancelar2" id="botao-cancelar2">Cancelar</button>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
 
-<script>
-    const pokemons = @Html.Raw(pokemonsJson);
-</script>
+    <script>
+        const pokemons = @Html.Raw(pokemonsJson);
+    </script>
 
 </body>
 
