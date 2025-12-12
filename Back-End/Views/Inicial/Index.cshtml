@@ -1,0 +1,72 @@
+@model BackEndProjeto.Models.Usuario
+@{
+    Layout = null;
+    var pokemonsJson = System.Text.Json.JsonSerializer.Serialize(ViewBag.Pokemons ?? new List<Pokemon>());
+}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/inicial.css">
+    <script defer src="~/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+        <img src="assets/1158.png">
+        <h1>Pokedex Online</h1>
+        </div>
+        <div class="botao">
+            <button onclick="window.location.href='/Login/Index'" type="submit" class="login">Login</button>
+            <button onclick="window.location.href='/Cadastro/Index'" type="submit" class="cadastro">Cadastrar-se</button>
+        </div>
+    </header>
+
+    <div class="Pesquisa">
+        <p>Nome:</p>
+        <input type="text" class="nome" placeholder="Pikachu">
+        <p>Tipo:</p>
+
+        <select class="tipo">
+            <option value=""></option>
+            <option value="bug">Inseto</option>
+            <option value="dark">Sombrio</option>
+            <option value="dragon">Dragão</option>
+            <option value="fairy">Fada</option>
+            <option value="fighting">Lutador</option>
+            <option value="fire">Fogo</option>
+            <option value="flying">Voador</option>
+            <option value="ghost">Fantasma</option>
+            <option value="grass">Planta</option>
+            <option value="ground">Terrestre</option>
+            <option value="ice">Gelo</option>
+            <option value="normal">Normal</option>
+            <option value="poison">Venenoso</option>
+            <option value="psychic">Psíquico</option>
+            <option value="rock">Pedra</option>
+            <option value="steel">Aço</option>
+            <option value="water">Água</option>
+        </select>
+
+    </div>
+
+    <div class="div">
+        <table class="tabela">
+
+        </table>
+
+    </div>
+
+    <footer>
+        <h3>All content & design © Pokédex, 2025-2025. Pokémon images & names © 1995-2025 Nintendo/Game Freak.</h3>
+        <h3 class="privacy">Privacy policy</h3>
+    </footer>
+</body>
+
+</html>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dudu\\Desktop\\aaa\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj": {}
+    "C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dudu\\Desktop\\aaa\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj": {
+    "C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dudu\\Desktop\\aaa\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+        "projectUniqueName": "C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
         "projectName": "BackEndProjeto",
-        "projectPath": "C:\\Users\\Dudu\\Desktop\\aaa\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
-        "packagesPath": "C:\\Users\\Dudu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dudu\\Desktop\\aaa\\Projeto-Grupo-Senai\\Back-End\\obj\\",
+        "projectPath": "C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+        "packagesPath": "C:\\Users\\45255137804\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dudu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\45255137804\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
