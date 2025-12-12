@@ -55,22 +55,23 @@
         <main>
             <section class="container-cima">
                 <div class="buscar">
-                    <div class="busca-nome">
-                        <input type="text" placeholder="Buscar por nome">
+                    <div class="busca-nome" id="busca-nome">
+                        <input id="input-busca-nome" type="text" placeholder="Buscar por nome">
                         <img class="lupa" src="assets/rlupa.svg" alt="">
                     </div>
-                    <div class="busca-tipo">
-                        <input type="text" placeholder="Buscar por tipo">
+
+                    <div class="busca-tipo" id="busca-tipo">
+                        <input id="input-busca-tipo" type="text" placeholder="Buscar por tipo">
                         <img class="seta" src="assets/rseta.svg" alt="">
                     </div>
                 </div>
 
-                <div class="pokemon-layer-1">
+                <div class="pokemon-layer-1" id="pokemon-layer">
                     @foreach (var pokemon in ViewBag.Pokemons ?? new List<Pokemon>())
                     {
                         <div class="pokemon-1" data-id="@pokemon.PokemonId">
 
-                            <div class="poke-cima">
+                            <div class="poke-cima" id="poke-cima">
                                 <p>Nome: @pokemon.Nome</p>
                                 <p>Tipo: @pokemon.Tipo</p>
                                 <p>Tipo 2: @(pokemon.Tipo2 ?? "Nenhum")</p>
@@ -79,8 +80,9 @@
 
                             <div class="poke-imagem">
                                 <img src="@(!string.IsNullOrEmpty(pokemon.Imagem) 
-                                                             ? pokemon.Imagem 
-                                                             : "/assets/pokemon-placeholder.png")" alt="@pokemon.Nome" class="imagem-pokemon">
+                                                                                                  ? pokemon.Imagem 
+                                                                                                  : "/assets/pokemon-placeholder.png")" alt="@pokemon.Nome"
+                                    class="imagem-pokemon">
                             </div>
 
                             <div class="poke-baixo">

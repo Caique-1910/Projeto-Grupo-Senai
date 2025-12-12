@@ -16,8 +16,9 @@ label {
 }
 
 
+
 body {
-    background-image: url('/assets/bg.png');
+    background-image: url('../assets/bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,12 +32,6 @@ main {
     flex-direction: row;
     height: 100vh;
     gap: 7%;
-}
-
-.erro{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 
@@ -108,10 +103,6 @@ main {
 }
 
 .entrar{
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
     background-color: #362D3E;
     color: white;
     width: 20%;
@@ -119,6 +110,7 @@ main {
     border: 4px solid #cd290c;
     border-radius: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 .registrar {
     display: flex;
@@ -134,11 +126,14 @@ main {
     cursor: pointer;
 }
 
+
+
+
 .usuario,
 .senha {
     display: flex;
     width: 50%;
-    height: 4.5vh;
+    height: 4vh;
     background: #362D3E;
     border: 4px solid #cd290c;
     border-radius: 10px;
@@ -150,7 +145,6 @@ main {
 
 .google {
     width: 35%;
-;
 }
 
 a {
@@ -169,91 +163,6 @@ a {
 
 /* RESPONSAVIDADE */
 
-@media (max-width: 768px) {
-    .login h1 {
-        font-size: 3vw;
-        display: flex;
-        text-align: center;
-    }
-
-    .login-alternativo a {
-        display: flex;
-        text-align: center;
-    }
-
-    .login-alternativo h2 {
-        font-size: 3vw;
-        display: flex;
-        text-align: center;
-    }
-
-    .entrar,
-    .registrar {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-        font-size: 0.05em;
-        width: 400%;
-        margin: 0;
-        height: 160%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    .login {
-        width: 500%;
-        height: 50vh;
-        font-size: 2.5vw;
-        gap: 5%;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .login h1 {
-        font-size: 2.5vw;
-        display: flex;
-        text-align: center;
-    }
-
-    .login-alternativo a {
-        display: flex;
-        text-align: center;
-    }
-
-    .login-alternativo h2 {
-        font-size: 2.5vw;
-        display: flex;
-        text-align: center;
-    }
-
-    .entrar,
-    .registrar {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-        font-size: 0.07em;
-        width: 200%;
-        margin: 0;
-        height: 120%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .login {
-        width: 200%;
-        height: 50vh;
-        font-size: 1.5vw;
-        gap: 5%;
-    }
-
-}
 
 @media (min-width:468) and (max-height:700px) {
 
@@ -261,6 +170,15 @@ a {
         flex-direction: column;
         gap: 20%;
         height: 200vh;
+    }
+
+    .login h1 {
+    color: #F8B050;
+    font-size: 1.5em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     }
 
     .login {
@@ -310,10 +228,6 @@ a {
 
     .registrar,
     .entrar {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
         font-size: 0.05em;
         width: 300%;
         height: 160%;
@@ -367,19 +281,29 @@ a {
         font-size: 0.5em;
     }
 
-    .registrar,
-    .entrar {
-        display: flex;
+.entrar{
+    background-color: #362D3E;
+    color: white;
+    width: 20%;
+    font-size: 0.8em;
+    border: 4px solid #cd290c;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.registrar {
+    display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-        font-size: 0.05em;
-        width: 300%;
-        height: 120%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
+    background-color: #362D3E;
+    color: white;
+    width: 25%;
+    font-size: 0.8em;
+    border: 4px solid #cd290c;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 }
 
@@ -404,91 +328,8 @@ label {
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-    .login h1 {
-        font-size: 3vw;
-        display: flex;
-        text-align: center;
-    }
-
-    .login-alternativo a {
-        display: flex;
-        text-align: center;
-    }
-
-    .login-alternativo h2 {
-        font-size: 3vw;
-        display: flex;
-        text-align: center;
-    }
-
-    .entrar,
-    .registrar {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-        font-size: 0.05em;
-        width: 400%;
-        margin: 0;
-        height: 160%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
 
-    .login {
-        width: 500%;
-        height: 50vh;
-        font-size: 2.5vw;
-        gap: 5%;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .login h1 {
-        font-size: 2.5vw;
-        display: flex;
-        text-align: center;
-    }
-
-    .login-alternativo a {
-        display: flex;
-        text-align: center;
-    }
-
-    .login-alternativo h2 {
-        font-size: 2.5vw;
-        display: flex;
-        text-align: center;
-    }
-
-    .entrar,
-    .registrar {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-        font-size: 0.07em;
-        width: 200%;
-        margin: 0;
-        height: 120%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .login {
-        width: 200%;
-        height: 50vh;
-        font-size: 1.5vw;
-        gap: 5%;
-    }
-
-}
 
 @media (min-width:468) and (max-height:700px) {
 
@@ -543,19 +384,29 @@ label {
         font-size: 0.5em;
     }
 
-    .registrar,
-    .entrar {
-        display: flex;
+.entrar{
+    background-color: #362D3E;
+    color: white;
+    width: 20%;
+    font-size: 0.8em;
+    border: 4px solid #cd290c;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.registrar {
+    display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-        font-size: 0.05em;
-        width: 300%;
-        height: 160%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
+    background-color: #362D3E;
+    color: white;
+    width: 25%;
+    font-size: 0.8em;
+    border: 4px solid #cd290c;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 }
 
@@ -600,21 +451,32 @@ label {
 
     a {
         font-size: 0.5em;
+        text-decoration: none;
     }
 
-    .registrar,
-    .entrar {
-        display: flex;
+.entrar{
+    background-color: #362D3E;
+    color: white;
+    width: 20%;
+    font-size: 0.8em;
+    border: 4px solid #cd290c;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.registrar {
+    display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-        font-size: 0.05em;
-        width: 300%;
-        height: 120%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
+    background-color: #362D3E;
+    color: white;
+    width: 25%;
+    font-size: 0.8em;
+    border: 4px solid #cd290c;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 }
 

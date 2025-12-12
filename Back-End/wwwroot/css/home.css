@@ -5,13 +5,17 @@
     --bgPrin: #314653;
     --coPrin: #cd290c;
     --coPrin2: #362D3E;
+    --corneutra: #000000;
+    --placeholder: #3c3c3c;
 }
 
 /* Tema CLARO */
 body[data-tema="claro"] {
-    --bgPrin: #4d697b;
-    --coPrin: #ea4f4fff;
-    --coPrin2: #79668a;
+    --bgPrin: #a4acb0;
+    --coPrin: #ff5232;
+    --coPrin2: #736c79;
+    --corneutra: #ffffff;
+    --placeholder: #2c2c2c;
 }
 
 
@@ -138,7 +142,7 @@ main {
     min-width: 40%;
     display: flex;
     align-items: center;
-    background-color: #000000;
+    background-color: var(--corneutra);
     border: 0.125rem solid var(--coPrin);
     border-radius: 0.75rem;
     padding: 0.5vh 1vw;
@@ -154,6 +158,11 @@ main {
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.05rem;
+}
+
+.busca-nome input::placeholder,
+.busca-tipo input::placeholder {
+    color: var(--placeholder);
 }
 
 .lupa,
@@ -179,7 +188,7 @@ main {
 .pokemon-4,
 .pokemon-5,
 .pokemon-6 {
-    background-color: #000000;
+    background-color: var(--corneutra);
     border: 0.125rem solid var(--coPrin);
     border-radius: 1.25rem;
     color: var(--coPrin);
@@ -211,7 +220,6 @@ main {
     gap: 1.5vh;
     font-size: 1.0rem;
     font-weight: 700;
-    text-shadow: 0 0 0.3rem var(--coPrin);
 }
 
 .poke-baixo {
@@ -233,9 +241,8 @@ main {
 .botao-add2,
 .botao-salvar,
 .botao-cancelar,
-.botao-confirmacao
- {
-    background-color: #000000;
+.botao-confirmacao {
+    background-color: var(--corneutra);
     color: var(--coPrin);
     border: 0.125rem solid var(--coPrin);
     border-radius: 0.75rem;
@@ -257,9 +264,9 @@ main {
 .botao-cancelar-add:hover,
 .botao-salvar:hover,
 .botao-cancelar:hover,
-.botao-confirmacao:hover{
+.botao-confirmacao:hover {
     background-color: var(--coPrin);
-    color: #000000;
+    color: var(--corneutra);
 }
 
 .aviso-seguranca {
@@ -313,7 +320,7 @@ main {
     height: 86%;
     background-color: var(--coPrin2);
     margin-top: 2%;
-    
+
     gap: 2vh;
     justify-content: center;
 }
@@ -337,7 +344,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: var(--corneutra);
     border: 2px solid #cd290cf1;
     border-radius: 10px;
     height: 7vh;
@@ -372,7 +379,7 @@ form {
 .poke-imagem {
     display: flex;
     justify-content: center;
-    height: 40%;
+    height: 45%;
     text-align: center;
 }
 
@@ -380,8 +387,8 @@ form {
     border: 1px solid rgb(205, 41, 12);
     box-shadow: rgba(205, 41, 12, 0.533) 0px 0px 1rem;
     border-radius: 10px;
-    background-color: #000000;
-    image-rendering:pixelated;
+    background-color: var(--corneutra);
+    image-rendering: pixelated;
 }
 
 #sidebar {
@@ -390,43 +397,47 @@ form {
     left: 0;
     width: 17%;
     height: 145vh;
-    margin-left: -350px; 
+    margin-left: -350px;
     overflow-y: auto;
     background: var(--coPrin2);
     border: 0.225rem solid var(--coPrin);
     font-size: medium;
     display: flex;
     flex-direction: column;
-    transition: margin-left 0.3s ease; 
+    transition: margin-left 0.3s ease;
     margin-top: 2.5vh;
 }
 
 #sidebar.active {
-    margin-left: 0; 
+    margin-left: 0;
 }
 
-#configuracoes{
+#configuracoes {
     z-index: 1000;
     position: absolute;
     left: 0;
     width: 17%;
     height: 145vh;
-    margin-left: -350px; 
+    margin-left: -350px;
     overflow-y: auto;
     background: var(--coPrin2);
     border: 0.225rem solid var(--coPrin);
     font-size: medium;
     display: flex;
     flex-direction: column;
-    transition: margin-left 0.3s ease; 
+    transition: margin-left 0.3s ease;
     margin-top: 20px;
 }
 
-#configuracoes.active{
-    margin-left: 0; 
+#configuracoes.active {
+    margin-left: 0;
 }
 
-.config, .exit, .imgUsuario, .muda-tema, .sairConfig {
+.config,
+.exit,
+.imgUsuario,
+.muda-tema,
+.sairConfig {
     margin-bottom: 25%;
     margin-top: 20%;
     color: var(--coPrin);
@@ -436,18 +447,19 @@ form {
 .botao-cancelar-add {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     width: 95%;
 }
 
-.botao-cancelar2,.botao-confirmacao{
+.botao-cancelar2,
+.botao-confirmacao {
     display: flex;
     width: 80%;
     justify-content: center;
     text-align: center;
 }
 
-.acoes-div-baixo-esq{
+.acoes-div-baixo-esq {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -457,6 +469,6 @@ form {
     margin-bottom: 3vh;
 }
 
-a{
+a {
     text-decoration: none
 }

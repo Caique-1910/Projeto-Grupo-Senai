@@ -211,4 +211,54 @@ exitConf.addEventListener("click", function () {
 
 
 
+// FILTRO POR NOME - Explicando de forma meio porca e o seguinte
+// ele faz uma vusca em cada card oque bate o nome ""nomePokemon.includes(texto)"" ele deixa flex o resto esconde 
+// pensei que seria mais dificil
+// agora so faco a mesma coisa com o do tipo e marcha e boa 
 
+const inputBuscaNome = document.getElementById("input-busca-nome");
+const cardsPokemons = document.querySelectorAll(".pokemon-1");
+
+inputBuscaNome.addEventListener("input", () => {
+    const texto = inputBuscaNome.value.toLowerCase().trim();
+
+    cardsPokemons.forEach(card => {
+        const nomePokemon = card.querySelector(".poke-cima p:first-child").textContent
+            .replace("Nome:", "")
+            .trim()
+            .toLowerCase();
+
+        if (nomePokemon.includes(texto)) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
+// Serve para 
+// nth-child(1)  primeiro ou p:first-child
+
+// nth-child(2)  segundo
+
+// nth-child(3)  terceiro
+
+const inputBuscaTipo = document.getElementById("input-busca-tipo");
+
+inputBuscaTipo.addEventListener("input", () => {
+    const textoTipo = inputBuscaTipo.value.toLowerCase().trim();
+
+    cardsPokemons.forEach(card => {
+        const tipoPokemon = card.querySelector(".poke-cima p:nth-child(2)")
+            .textContent.replace("Tipo:", "").trim().toLowerCase();
+
+        const tipoPokemon2 = card.querySelector(".poke-cima p:nth-child(3)")
+            .textContent.replace("Tipo 2:", "").trim().toLowerCase();
+
+        if (tipoPokemon.includes(textoTipo) || tipoPokemon2.includes(textoTipo)) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
