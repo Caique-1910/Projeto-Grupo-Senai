@@ -1,139 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-*
-{
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Press Start 2P", system-ui;
 }
 
-body
-{
+body {
+    background-color: black;
+    display: flex;
     flex-direction: column;
     overflow-x: hidden;
 }
 
-header
-{
+/* ===== HEADER ===== */
+header {
     background-color: rgba(54, 45, 62, 1);
     color: rgba(248, 176, 80, 1);
-    padding: 3vh;
-    padding: 3vw;
-    font-size: 2vw;
+    padding: 3vh 3vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
-img
-{
- width: 10vw;
- margin-right: 10vw;
- margin-left: 3vw;
- 
-}
-
-.titulo
-{
+.titulo {
     display: flex;
-    justify-content: flex-start;
-    width: 100vw;
     align-items: center;
-    height: 10vh;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.botao
-{
+.titulo img {
+    width: 6vw;
+    margin-right: 2vw;
+}
+
+.botao {
     display: flex;
+    margin-top: 2vh;
 }
 
-button,
-.nome,
-.tipo
-{
+button {
     background-color: black;
     color: rgba(205, 41, 12, 1);
+    border: 2px solid rgba(205, 41, 12, 1);
     border-radius: 10px;
-    border-color: rgba(205, 41, 12, 1);
-    border: solid;
-    border-width: 2px;
-    padding: 0.5vh;
-    padding: 0.5vw;
-    font-size: 1.2vw;
+    padding: 0.6vw;
+    font-size: 1vw;
+    cursor: pointer;
 }
 
-.login
-{
+.login {
     width: 8vw;
-    margin-left: 1vw;
-    margin-top: 1vh;
+    margin-right: 1vw;
 }
 
-.cadastro
-{
+.cadastro {
     width: 17vw;
-    margin-left: 1vw;
-    margin-top: 1vh;
 }
 
-.nome
-{
-    width: 23vw;
-}
-
-.tipo
-{
-    width: 15vw;
-}
-
-p
-{
-    padding: 0.5vh;
-    padding: 0.5vw;
-    font-size: 1.5vw;
-}
-
-.Pesquisa
-{
+/* ===== PESQUISA ===== */
+.Pesquisa {
     background-color: black;
     color: rgba(205, 41, 12, 1);
-    padding: 1vh;
     padding: 1vw;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 1vw;
 }
 
-.div
-{
+.Pesquisa p {
+    font-size: 1vw;
+}
+
+.nome,
+.tipo {
+    background-color: black;
+    color: rgba(205, 41, 12, 1);
+    border: 2px solid rgba(205, 41, 12, 1);
+    border-radius: 10px;
+    padding: 0.5vw;
+    font-size: 1vw;
+}
+
+.nome {
+    width: 22vw;
+}
+
+.tipo {
+    width: 15vw;
+}
+
+
+.div {
     display: flex;
-    background-color: rgb(0, 0, 0);
     justify-content: center;
-    height: 100vh;
+    background-color: black;
+    padding-bottom: 4vh;
 }
 
-.tabela
-{
+/* ===== CONTAINER FLEX DOS CARDS ===== */
+.tabela {
     background-color: rgba(49, 70, 83, 1);
     width: 90vw;
-    height: 100vh;
+    padding: 2vw;
+
     display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    scrollbar-color: rgba(205, 41, 12, 1) rgb(0, 0, 0);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+
+    height: auto;         
+    min-height: unset;     
 }
 
-footer
-{
+/* ===== CARD DO POKÉMON ===== */
+.pokemon-card {
+    background-color: #111;
+    border: 2px solid rgba(205, 41, 12, 1);
+    border-radius: 15px;
+    width: 220px;
+    padding: 1.5vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(205, 41, 12, 0.6);
+}
+
+.pokemon-card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1vh;
+}
+
+.pokemon-card p {
+    font-size: 0.75vw;
+    margin-top: 0.5vh;
+    text-transform: capitalize;
+    color: rgba(205, 41, 12, 1);
+}
+
+/* ===== FOOTER ===== */
+footer {
     background-color: rgba(54, 54, 54, 1);
     color: white;
     padding: 4vh;
     font-size: 0.7vw;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 
-.privacy
-{
-    margin-top: 4vh;
+.privacy {
+    margin-top: 3vh;
 }
-
