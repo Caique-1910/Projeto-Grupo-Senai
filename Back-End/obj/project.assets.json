@@ -7883,19 +7883,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\45255137804\\.nuget\\packages\\": {}
+    "C:\\Users\\52918563862\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+      "projectUniqueName": "C:\\Users\\52918563862\\Desktop\\PokemonFinal\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
       "projectName": "BackEndProjeto",
-      "projectPath": "C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
-      "packagesPath": "C:\\Users\\45255137804\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\obj\\",
+      "projectPath": "C:\\Users\\52918563862\\Desktop\\PokemonFinal\\Projeto-Grupo-Senai\\Back-End\\BackEndProjeto.csproj",
+      "packagesPath": "C:\\Users\\52918563862\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\52918563862\\Desktop\\PokemonFinal\\Projeto-Grupo-Senai\\Back-End\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\45255137804\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\52918563862\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -7969,16 +7969,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\45255137804\\Desktop\\pokedex\\Projeto-Grupo-Senai\\Back-End\\obj\\project.nuget.cache: '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
-    }
-  ]
+  }
 }
