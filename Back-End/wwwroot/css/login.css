@@ -165,12 +165,12 @@ a {
 /* RESPONSAVIDADE */
 
 
-@media (min-width:468) and (max-height:700px) {
+@media (max-width:468px) {
 
     main {
         flex-direction: column;
         gap: 20%;
-        height: 200vh;
+        height: 100vh;
     }
 
     .login h1 {
@@ -183,8 +183,8 @@ a {
     }
 
     .login {
-        width: 80vw;
-        height: 60vh;
+        width: 75vw;
+        height: 50vh;
         font-size: 2.5vw;
         gap: 5%;
         margin: 0;
@@ -192,7 +192,7 @@ a {
     }
 
     .botoes {
-        width: 100%;
+        width: 70vw;
         height: 160%;
     }
 
@@ -203,7 +203,8 @@ a {
 
     .usuario,
     .senha {
-        width: 80%;
+        width: 60vw;
+        margin-left: 2vw;
     }
 
     .google {
@@ -211,11 +212,12 @@ a {
     }
 
     .login-alternativo {
-        width: 80vw;
+        width: 50vw;
     }
 
     label {
-        font-size: 0.5em;
+        font-size: 2vw;
+        padding-left: 2vw;
     }
 
     .usuario,
@@ -229,105 +231,12 @@ a {
 
     .registrar,
     .entrar {
-        font-size: 0.05em;
-        width: 300%;
-        height: 160%;
+        font-size: 1.5vw;
+        width: 20vw;
+        height: 4vh;
         text-align: center;
         display: flex;
         justify-content: center;
-    }
-
-}
-
-@media (max-height: 468px) and (min-width: 0px) {
-    main {
-        height: 100vh;
-    }
-
-    .login {
-        height: 40vh;
-        justify-content: center;
-    }
-
-    .login-alternativo {
-        height: 40vh;
-        justify-content: center;
-    }
-
-    .botoes {
-        height: 100%;
-        margin-bottom: 0;
-    }
-
-    .logar {
-        height: 25vh;
-        margin-left: 0;
-        gap: 3%;
-    }
-
-    .login h1,
-    .login-alternativo h1{
-        font-size: 1rem;
-    }
-
-
-   
-
-    .usuario,
-    .senha {
-        font-size: 0.5em;
-        height: 60%;
-    }
-
-    
-
-    .entrar {
-        background-color: #362D3E;
-        color: white;
-        width: 20%;
-        font-size: 0.8em;
-        border: 4px solid #cd290c;
-        border-radius: 10px;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .registrar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        background-color: #362D3E;
-        color: white;
-        width: 25%;
-        font-size: 0.8em;
-        border: 4px solid #cd290c;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-   
-
-    .google {
-        width: 35%;
-    }
-
-    a {
-        color: #ffffff;
-        font-size: 0.6em;
-    }
-
-    label {
-        font-size: 0.5rem;
-        margin-left: 6%;
-        margin-top: 2%;
-    }
-
-    input{
-        margin-left: 6%;
-        margin-top: 2%;
-        width: 2rem;
-        height: 2rem;
     }
 
 }
