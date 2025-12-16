@@ -61,18 +61,21 @@ function editarPokemon(id) {
     inputTipo2.value = pokemon.Tipo2 ?? "";
     inputPokemonId.value = id;
 
-    // Mostra o form de edição
+    // Mostrar layout
     aparecerLayout.style.display = 'flex';
 
-    // Mostrar área de salvar/editar
+    // Mostrar botões de salvar
     layoutConfirmar.style.display = 'flex';
 
-    // Esconder botão de adicionar interno
+    // Esconder botões de adicionar
     botaoAdicionarInterno.style.display = 'none';
-    botaoCancelaradd = style.display = 'none'
+    botaoCancelaradd.style.display = 'none';
 
-    texto2.style.display = 'flex';
-    texto1.style.display = 'none';
+    // Texto correto
+    texto2.style.display = 'flex'; // editando
+    texto1.style.display = 'none'; // adicionando
+
+    scrollParaAdicionar();
 }
 
 
@@ -81,6 +84,7 @@ function editarPokemon(id) {
 function excluirPokemon(id) {
     inputPokemonIdExcluir.value = id;
     layoutExcluir.style.display = 'flex';
+    scrollParaExcluir();
 }
 
 
@@ -95,6 +99,7 @@ botaoAdicionar.addEventListener('click', () => {
     botaoCancelaradd.style.display = 'flex';
     texto1.style.display = 'flex';
     texto2.style.display = 'none';
+    scrollParaAdicionar();
 });
 
 
@@ -262,3 +267,18 @@ inputBuscaTipo.addEventListener("input", () => {
         }
     });
 });
+
+
+function scrollParaAdicionar() {
+    aparecerLayout.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+function scrollParaExcluir() {
+    layoutExcluir.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}

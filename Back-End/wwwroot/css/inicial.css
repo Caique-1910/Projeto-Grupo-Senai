@@ -22,6 +22,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
 }
 
 .titulo {
@@ -40,6 +41,7 @@ header {
 .titulo img {
     width: 10vw;
     margin-right: 2vw;
+    margin-top: 2vh;
 }
 
 .botao {

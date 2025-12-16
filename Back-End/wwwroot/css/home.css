@@ -472,3 +472,7 @@ form {
 a {
     text-decoration: none
 }
+
+#texto2 {
+    display: none;
+}

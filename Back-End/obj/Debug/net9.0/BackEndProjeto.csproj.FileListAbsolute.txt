@@ -798,11 +798,11 @@ C:\Users\45255137804\Desktop\pokedex\Projeto-Grupo-Senai\Back-End\obj\Debug\net9
 C:\Users\45255137804\Desktop\pokedex\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\BackEndProjeto.pdb
 C:\Users\45255137804\Desktop\pokedex\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\BackEndProjeto.genruntimeconfig.cache
 C:\Users\45255137804\Desktop\pokedex\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\ref\BackEndProjeto.dll
-C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-wwwzw6qxsz.gz
-C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\8zvcbfi61l-1li2svf3jd.gz
-C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-urv2b8ztyu.gz
 C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\dkbz51c2gy-2q28tuw4dj.gz
-C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\ugqn2qagfk-7z3csorkbs.gz
 C:\Users\45255137804\Desktop\pokedex\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\ugqn2qagfk-u73rva07fl.gz
 C:\Users\45255137804\Desktop\pokedex\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\8zvcbfi61l-hd8mh9jmxi.gz
 C:\Users\45255137804\Desktop\pokedex\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\dkbz51c2gy-2q28tuw4dj.gz
+C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\8zvcbfi61l-giv9oentg1.gz
+C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\ugqn2qagfk-kr5e25tem8.gz
+C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\we9x3agplz-lldo57x8q6.gz
+C:\Users\44438098807\Desktop\ddsaw\Projeto-Grupo-Senai\Back-End\obj\Debug\net9.0\compressed\7vrifnie8j-0585zcgpyc.gz
