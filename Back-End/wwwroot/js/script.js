@@ -46,9 +46,8 @@ function carregarPokemonsIniciais() {
     table.innerHTML = "";
 
     const pokemonsMaisUsados = [
-        "pikachu",
         "mewtwo",
-        "charmander",
+        "mudkip",
         "darkrai",
         "lapras",
         "chandelure",
@@ -57,7 +56,11 @@ function carregarPokemonsIniciais() {
         "lucario",
         "dragonite",
         "swampert",
-        "rayquaza"
+        "rayquaza",
+        "lopunny",
+        "vaporeon",
+        "haxorus",
+        "greninja"
     ];
 
     pokemonsMaisUsados.forEach(nome => {
